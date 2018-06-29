@@ -25,6 +25,13 @@ Retrieves all adjectives in input string
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -53,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -71,6 +78,13 @@ Returns all adverb words in the input string
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -99,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -117,6 +131,13 @@ Get the component words in an input string, formatted as JSON
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -145,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -163,6 +184,13 @@ Segment an input string into its component words
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -191,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -209,6 +237,13 @@ Returns all of the nouns in the input string
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -237,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -255,6 +290,13 @@ Get all of the verbs in the input string.
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -283,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -301,6 +343,13 @@ Returns all pronouns in the input string
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -329,7 +378,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -347,6 +396,13 @@ Returns all of the proper nouns in a string.  Proper nouns are named entities su
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.WordsApi();
 
@@ -375,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 

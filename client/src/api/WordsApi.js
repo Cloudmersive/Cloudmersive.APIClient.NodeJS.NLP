@@ -82,7 +82,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
@@ -129,7 +129,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
@@ -176,7 +176,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetWordsJsonResponse;
@@ -223,7 +223,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
@@ -270,7 +270,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
@@ -317,7 +317,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
@@ -364,7 +364,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
@@ -411,7 +411,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';

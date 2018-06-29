@@ -95,6 +95,14 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
 
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix['Apikey'] = "Token"
+
 var api = new CloudmersiveNlpApiClient.ExtractEntitiesStringApi()
 
 var value = "value_example"; // {String} Input string

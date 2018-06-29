@@ -18,6 +18,13 @@ Parses the input string into a Penn Treebank syntax tree
 ### Example
 ```javascript
 var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
+var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveNlpApiClient.ParseStringApi();
 
@@ -46,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 

@@ -82,7 +82,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = CheckJsonResponse;
@@ -129,7 +129,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = CheckSentenceJsonResponse;
@@ -176,7 +176,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'Boolean';
@@ -223,7 +223,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
@@ -270,7 +270,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = CorrectJsonResponse;
@@ -317,7 +317,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'Boolean';
