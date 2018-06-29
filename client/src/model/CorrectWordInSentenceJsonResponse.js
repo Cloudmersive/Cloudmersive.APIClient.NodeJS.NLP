@@ -36,7 +36,7 @@
   /**
    * The CorrectWordInSentenceJsonResponse model module.
    * @module model/CorrectWordInSentenceJsonResponse
-   * @version 1.0.8
+   * @version 1.0.9
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The PosRequest model module.
    * @module model/PosRequest
-   * @version 1.0.8
+   * @version 1.0.9
    */
 
   /**
