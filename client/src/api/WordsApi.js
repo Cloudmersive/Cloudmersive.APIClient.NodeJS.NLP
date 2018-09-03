@@ -33,7 +33,7 @@
   /**
    * Words service.
    * @module api/WordsApi
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**

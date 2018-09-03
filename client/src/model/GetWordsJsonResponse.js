@@ -36,7 +36,7 @@
   /**
    * The GetWordsJsonResponse model module.
    * @module model/GetWordsJsonResponse
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**

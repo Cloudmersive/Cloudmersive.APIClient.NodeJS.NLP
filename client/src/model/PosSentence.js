@@ -36,7 +36,7 @@
   /**
    * The PosSentence model module.
    * @module model/PosSentence
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**

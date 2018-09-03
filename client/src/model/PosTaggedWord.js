@@ -36,7 +36,7 @@
   /**
    * The PosTaggedWord model module.
    * @module model/PosTaggedWord
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**
