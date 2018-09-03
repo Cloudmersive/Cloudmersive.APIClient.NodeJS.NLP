@@ -36,7 +36,7 @@
   /**
    * The CheckSentenceJsonResponse model module.
    * @module model/CheckSentenceJsonResponse
-   * @version 1.0.9
+   * @version 1.1.1
    */
 
   /**

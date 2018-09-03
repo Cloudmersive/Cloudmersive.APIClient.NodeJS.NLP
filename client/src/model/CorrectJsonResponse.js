@@ -36,7 +36,7 @@
   /**
    * The CorrectJsonResponse model module.
    * @module model/CorrectJsonResponse
-   * @version 1.0.9
+   * @version 1.1.1
    */
 
   /**

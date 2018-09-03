@@ -1,6 +1,6 @@
 {
   "name": "cloudmersive-nlp-api-client",
-  "version": "1.0.9",
+  "version": "1.1.1",
   "description": "The_powerful_Natural_Language_Processing_APIs_let_you_perform_part_of_speech_tagging_entity_identification_sentence_parsing_and_much_more_to_help_you_understand_the_meaning_of_unstructured_text_",
   "license": "Unlicense",
   "main": "src/index.js",
@@ -11,7 +11,7 @@
     "fs": false
   },
   "dependencies": {
-    "superagent": "3.5.2"
+    "superagent": "3.7.0"
   },
   "devDependencies": {
     "mocha": "~2.3.4",
