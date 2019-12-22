@@ -4,12 +4,12 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**languageDetectionPost**](LanguageDetectionApi.md#languageDetectionPost) | **POST** /nlp/language/detect | Detect language of text
+[**languageDetectionGetLanguage**](LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 
 
-<a name="languageDetectionPost"></a>
-# **languageDetectionPost**
-> LanguageDetectionResponse languageDetectionPost(textToDetect)
+<a name="languageDetectionGetLanguage"></a>
+# **languageDetectionGetLanguage**
+> LanguageDetectionResponse languageDetectionGetLanguage(input)
 
 Detect language of text
 
@@ -28,7 +28,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveNlpApiClient.LanguageDetectionApi();
 
-var textToDetect = "textToDetect_example"; // String | Text to detect language of
+var input = new CloudmersiveNlpApiClient.LanguageDetectionRequest(); // LanguageDetectionRequest | 
 
 
 var callback = function(error, data, response) {
@@ -38,14 +38,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.languageDetectionPost(textToDetect, callback);
+apiInstance.languageDetectionGetLanguage(input, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **textToDetect** | **String**| Text to detect language of | 
+ **input** | [**LanguageDetectionRequest**](LanguageDetectionRequest.md)|  | 
 
 ### Return type
 

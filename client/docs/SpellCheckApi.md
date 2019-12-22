@@ -1,73 +1,16 @@
-# CloudmersiveNlpApiClient.SpellCheckApi
+# CloudmersiveNlpApiClient.SpellcheckApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**spellCheckCheckJson**](SpellCheckApi.md#spellCheckCheckJson) | **POST** /nlp/spellcheck/check/word/json | Spell check word
-[**spellCheckCheckSentenceJson**](SpellCheckApi.md#spellCheckCheckSentenceJson) | **POST** /nlp/spellcheck/check/sentence/json | Check if sentence is spelled correctly
-[**spellCheckCheckSentenceString**](SpellCheckApi.md#spellCheckCheckSentenceString) | **POST** /nlp/spellcheck/check/sentence/string | Spell check a sentence
-[**spellCheckCorrect**](SpellCheckApi.md#spellCheckCorrect) | **POST** /nlp/spellcheck/correct/word/string | Find spelling corrections
-[**spellCheckCorrectJson**](SpellCheckApi.md#spellCheckCorrectJson) | **POST** /nlp/spellcheck/correct/word/json | Find spelling corrections
-[**spellCheckPost**](SpellCheckApi.md#spellCheckPost) | **POST** /nlp/spellcheck/check/word/string | Spell check a word
+[**spellcheckCheckSentence**](SpellcheckApi.md#spellcheckCheckSentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
+[**spellcheckCorrectJson**](SpellcheckApi.md#spellcheckCorrectJson) | **POST** /nlp-v2/spellcheck/check/word | Find spelling corrections
 
 
-<a name="spellCheckCheckJson"></a>
-# **spellCheckCheckJson**
-> CheckJsonResponse spellCheckCheckJson(value)
-
-Spell check word
-
-Spell check a word as JSON
-
-### Example
-```javascript
-var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
-var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
-
-// Configure API key authorization: Apikey
-var Apikey = defaultClient.authentications['Apikey'];
-Apikey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Apikey.apiKeyPrefix = 'Token';
-
-var apiInstance = new CloudmersiveNlpApiClient.SpellCheckApi();
-
-var value = "value_example"; // String | Input sentence
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.spellCheckCheckJson(value, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| Input sentence | 
-
-### Return type
-
-[**CheckJsonResponse**](CheckJsonResponse.md)
-
-### Authorization
-
-[Apikey](../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="spellCheckCheckSentenceJson"></a>
-# **spellCheckCheckSentenceJson**
-> CheckSentenceJsonResponse spellCheckCheckSentenceJson(value)
+<a name="spellcheckCheckSentence"></a>
+# **spellcheckCheckSentence**
+> CheckSentenceResponse spellcheckCheckSentence(value)
 
 Check if sentence is spelled correctly
 
@@ -84,9 +27,9 @@ Apikey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Apikey.apiKeyPrefix = 'Token';
 
-var apiInstance = new CloudmersiveNlpApiClient.SpellCheckApi();
+var apiInstance = new CloudmersiveNlpApiClient.SpellcheckApi();
 
-var value = "value_example"; // String | Input sentence
+var value = new CloudmersiveNlpApiClient.CheckSentenceRequest(); // CheckSentenceRequest | Input sentence
 
 
 var callback = function(error, data, response) {
@@ -96,18 +39,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.spellCheckCheckSentenceJson(value, callback);
+apiInstance.spellcheckCheckSentence(value, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **value** | **String**| Input sentence | 
+ **value** | [**CheckSentenceRequest**](CheckSentenceRequest.md)| Input sentence | 
 
 ### Return type
 
-[**CheckSentenceJsonResponse**](CheckSentenceJsonResponse.md)
+[**CheckSentenceResponse**](CheckSentenceResponse.md)
 
 ### Authorization
 
@@ -118,115 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="spellCheckCheckSentenceString"></a>
-# **spellCheckCheckSentenceString**
-> &#39;Boolean&#39; spellCheckCheckSentenceString(value)
-
-Spell check a sentence
-
-Check if a sentence is spelled correctly
-
-### Example
-```javascript
-var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
-var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
-
-// Configure API key authorization: Apikey
-var Apikey = defaultClient.authentications['Apikey'];
-Apikey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Apikey.apiKeyPrefix = 'Token';
-
-var apiInstance = new CloudmersiveNlpApiClient.SpellCheckApi();
-
-var value = "value_example"; // String | Input sentence word
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.spellCheckCheckSentenceString(value, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| Input sentence word | 
-
-### Return type
-
-**&#39;Boolean&#39;**
-
-### Authorization
-
-[Apikey](../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="spellCheckCorrect"></a>
-# **spellCheckCorrect**
-> &#39;String&#39; spellCheckCorrect(value)
-
-Find spelling corrections
-
-Find the spelling corrections for a word
-
-### Example
-```javascript
-var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
-var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
-
-// Configure API key authorization: Apikey
-var Apikey = defaultClient.authentications['Apikey'];
-Apikey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Apikey.apiKeyPrefix = 'Token';
-
-var apiInstance = new CloudmersiveNlpApiClient.SpellCheckApi();
-
-var value = "value_example"; // String | Input word
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.spellCheckCorrect(value, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| Input word | 
-
-### Return type
-
-**&#39;String&#39;**
-
-### Authorization
-
-[Apikey](../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="spellCheckCorrectJson"></a>
-# **spellCheckCorrectJson**
-> CorrectJsonResponse spellCheckCorrectJson(value)
+<a name="spellcheckCorrectJson"></a>
+# **spellcheckCorrectJson**
+> CheckWordResponse spellcheckCorrectJson(value)
 
 Find spelling corrections
 
@@ -243,62 +80,9 @@ Apikey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Apikey.apiKeyPrefix = 'Token';
 
-var apiInstance = new CloudmersiveNlpApiClient.SpellCheckApi();
+var apiInstance = new CloudmersiveNlpApiClient.SpellcheckApi();
 
-var value = "value_example"; // String | Input string
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.spellCheckCorrectJson(value, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| Input string | 
-
-### Return type
-
-[**CorrectJsonResponse**](CorrectJsonResponse.md)
-
-### Authorization
-
-[Apikey](../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="spellCheckPost"></a>
-# **spellCheckPost**
-> &#39;Boolean&#39; spellCheckPost(value)
-
-Spell check a word
-
-Check if a word is spelled correctly
-
-### Example
-```javascript
-var CloudmersiveNlpApiClient = require('cloudmersive-nlp-api-client');
-var defaultClient = CloudmersiveNlpApiClient.ApiClient.instance;
-
-// Configure API key authorization: Apikey
-var Apikey = defaultClient.authentications['Apikey'];
-Apikey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Apikey.apiKeyPrefix = 'Token';
-
-var apiInstance = new CloudmersiveNlpApiClient.SpellCheckApi();
-
-var value = "value_example"; // String | Input string word
+var value = new CloudmersiveNlpApiClient.CheckWordRequest(); // CheckWordRequest | Input string
 
 
 var callback = function(error, data, response) {
@@ -308,18 +92,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.spellCheckPost(value, callback);
+apiInstance.spellcheckCorrectJson(value, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **value** | **String**| Input string word | 
+ **value** | [**CheckWordRequest**](CheckWordRequest.md)| Input string | 
 
 ### Return type
 
-**&#39;Boolean&#39;**
+[**CheckWordResponse**](CheckWordResponse.md)
 
 ### Authorization
 
