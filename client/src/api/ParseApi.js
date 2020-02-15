@@ -33,7 +33,7 @@
   /**
    * Parse service.
    * @module api/ParseApi
-   * @version 2.0.1
+   * @version 2.0.2
    */
 
   /**
@@ -88,7 +88,7 @@
       var returnType = ParseResponse;
 
       return this.apiClient.callApi(
-        '/nlp/parse/tree', 'POST',
+        '/nlp-v2/parse/tree', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

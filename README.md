@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.1
+- Package version: 2.0.2
 
 
 ## Installation
@@ -127,7 +127,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CloudmersiveNlpApiClient.ExtractEntitiesApi* | [**extractEntitiesPost**](docs/ExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *CloudmersiveNlpApiClient.LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
-*CloudmersiveNlpApiClient.ParseApi* | [**parseParseString**](docs/ParseApi.md#parseParseString) | **POST** /nlp/parse/tree | Parse string to syntax tree
+*CloudmersiveNlpApiClient.ParseApi* | [**parseParseString**](docs/ParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagAdjectives**](docs/PosTaggerApi.md#posTaggerTagAdjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagAdverbs**](docs/PosTaggerApi.md#posTaggerTagAdverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagNouns**](docs/PosTaggerApi.md#posTaggerTagNouns) | **POST** /nlp-v2/pos/tag/nouns | Part-of-speech tag a string, filter to nouns

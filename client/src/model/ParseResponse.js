@@ -36,7 +36,7 @@
   /**
    * The ParseResponse model module.
    * @module model/ParseResponse
-   * @version 2.0.1
+   * @version 2.0.2
    */
 
   /**
