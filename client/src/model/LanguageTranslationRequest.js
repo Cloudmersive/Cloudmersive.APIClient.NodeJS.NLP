@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.PosRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.LanguageTranslationRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The PosRequest model module.
-   * @module model/PosRequest
+   * The LanguageTranslationRequest model module.
+   * @module model/LanguageTranslationRequest
    * @version 2.0.3
    */
 
   /**
-   * Constructs a new <code>PosRequest</code>.
-   * Part of speech tagging request
-   * @alias module:model/PosRequest
+   * Constructs a new <code>LanguageTranslationRequest</code>.
+   * Input to a language translation operation
+   * @alias module:model/LanguageTranslationRequest
    * @class
    */
   var exports = function() {
@@ -52,28 +52,28 @@
   };
 
   /**
-   * Constructs a <code>PosRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>LanguageTranslationRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PosRequest} obj Optional instance to populate.
-   * @return {module:model/PosRequest} The populated <code>PosRequest</code> instance.
+   * @param {module:model/LanguageTranslationRequest} obj Optional instance to populate.
+   * @return {module:model/LanguageTranslationRequest} The populated <code>LanguageTranslationRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('InputText')) {
-        obj['InputText'] = ApiClient.convertToType(data['InputText'], 'String');
+      if (data.hasOwnProperty('TextToTranslate')) {
+        obj['TextToTranslate'] = ApiClient.convertToType(data['TextToTranslate'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Input text string
-   * @member {String} InputText
+   * Text to translate
+   * @member {String} TextToTranslate
    */
-  exports.prototype['InputText'] = undefined;
+  exports.prototype['TextToTranslate'] = undefined;
 
 
 

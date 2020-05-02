@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.PosRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.RephrasedSentenceOption = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,55 @@
 
 
   /**
-   * The PosRequest model module.
-   * @module model/PosRequest
+   * The RephrasedSentenceOption model module.
+   * @module model/RephrasedSentenceOption
    * @version 2.0.3
    */
 
   /**
-   * Constructs a new <code>PosRequest</code>.
-   * Part of speech tagging request
-   * @alias module:model/PosRequest
+   * Constructs a new <code>RephrasedSentenceOption</code>.
+   * One rephrasing of an original input sentence
+   * @alias module:model/RephrasedSentenceOption
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>PosRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>RephrasedSentenceOption</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PosRequest} obj Optional instance to populate.
-   * @return {module:model/PosRequest} The populated <code>PosRequest</code> instance.
+   * @param {module:model/RephrasedSentenceOption} obj Optional instance to populate.
+   * @return {module:model/RephrasedSentenceOption} The populated <code>RephrasedSentenceOption</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('InputText')) {
-        obj['InputText'] = ApiClient.convertToType(data['InputText'], 'String');
+      if (data.hasOwnProperty('RephrasedOptionIndex')) {
+        obj['RephrasedOptionIndex'] = ApiClient.convertToType(data['RephrasedOptionIndex'], 'Number');
+      }
+      if (data.hasOwnProperty('RephrasedSentenceText')) {
+        obj['RephrasedSentenceText'] = ApiClient.convertToType(data['RephrasedSentenceText'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Input text string
-   * @member {String} InputText
+   * Ordered index of the rephrasing option, 1-based, with 1 being the best option
+   * @member {Number} RephrasedOptionIndex
    */
-  exports.prototype['InputText'] = undefined;
+  exports.prototype['RephrasedOptionIndex'] = undefined;
+  /**
+   * One sentence of output rephrased text of original input sentence
+   * @member {String} RephrasedSentenceText
+   */
+  exports.prototype['RephrasedSentenceText'] = undefined;
 
 
 

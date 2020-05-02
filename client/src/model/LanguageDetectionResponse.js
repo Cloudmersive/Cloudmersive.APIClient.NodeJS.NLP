@@ -36,7 +36,7 @@
   /**
    * The LanguageDetectionResponse model module.
    * @module model/LanguageDetectionResponse
-   * @version 2.0.2
+   * @version 2.0.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The CheckSentenceResponse model module.
    * @module model/CheckSentenceResponse
-   * @version 2.0.2
+   * @version 2.0.3
    */
 
   /**

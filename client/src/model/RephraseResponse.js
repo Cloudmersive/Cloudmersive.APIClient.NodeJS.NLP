@@ -16,32 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/RephrasedSentence'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./RephrasedSentence'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.SentenceSegmentationResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.RephraseResponse = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.RephrasedSentence);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, RephrasedSentence) {
   'use strict';
 
 
 
 
   /**
-   * The SentenceSegmentationResponse model module.
-   * @module model/SentenceSegmentationResponse
+   * The RephraseResponse model module.
+   * @module model/RephraseResponse
    * @version 2.0.3
    */
 
   /**
-   * Constructs a new <code>SentenceSegmentationResponse</code>.
-   * @alias module:model/SentenceSegmentationResponse
+   * Constructs a new <code>RephraseResponse</code>.
+   * Output of a text rephrasing operation
+   * @alias module:model/RephraseResponse
    * @class
    */
   var exports = function() {
@@ -53,11 +54,11 @@
   };
 
   /**
-   * Constructs a <code>SentenceSegmentationResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>RephraseResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SentenceSegmentationResponse} obj Optional instance to populate.
-   * @return {module:model/SentenceSegmentationResponse} The populated <code>SentenceSegmentationResponse</code> instance.
+   * @param {module:model/RephraseResponse} obj Optional instance to populate.
+   * @return {module:model/RephraseResponse} The populated <code>RephraseResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,8 +67,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('Sentences')) {
-        obj['Sentences'] = ApiClient.convertToType(data['Sentences'], ['String']);
+      if (data.hasOwnProperty('RephrasedResults')) {
+        obj['RephrasedResults'] = ApiClient.convertToType(data['RephrasedResults'], [RephrasedSentence]);
       }
       if (data.hasOwnProperty('SentenceCount')) {
         obj['SentenceCount'] = ApiClient.convertToType(data['SentenceCount'], 'Number');
@@ -77,14 +78,17 @@
   }
 
   /**
+   * True if the language detection operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * @member {Array.<String>} Sentences
+   * Results of the rephrasing, paraphrasing operation, in the order of the input sentences
+   * @member {Array.<module:model/RephrasedSentence>} RephrasedResults
    */
-  exports.prototype['Sentences'] = undefined;
+  exports.prototype['RephrasedResults'] = undefined;
   /**
+   * Number of sentences in input text
    * @member {Number} SentenceCount
    */
   exports.prototype['SentenceCount'] = undefined;

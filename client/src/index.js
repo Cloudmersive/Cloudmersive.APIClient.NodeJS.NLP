@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CheckSentenceRequest', 'model/CheckSentenceResponse', 'model/CheckWordRequest', 'model/CheckWordResponse', 'model/CorrectWordInSentence', 'model/Entity', 'model/ExtractEntitiesRequest', 'model/ExtractEntitiesResponse', 'model/GetWordsRequest', 'model/GetWordsResponse', 'model/LanguageDetectionRequest', 'model/LanguageDetectionResponse', 'model/ParseRequest', 'model/ParseResponse', 'model/PosRequest', 'model/PosResponse', 'model/PosSentence', 'model/PosTaggedWord', 'model/SentenceSegmentationRequest', 'model/SentenceSegmentationResponse', 'model/WordPosition', 'api/ExtractEntitiesApi', 'api/LanguageDetectionApi', 'api/ParseApi', 'api/PosTaggerApi', 'api/SegmentationApi', 'api/SpellcheckApi'], factory);
+    define(['ApiClient', 'model/CheckSentenceRequest', 'model/CheckSentenceResponse', 'model/CheckWordRequest', 'model/CheckWordResponse', 'model/CorrectWordInSentence', 'model/Entity', 'model/ExtractEntitiesRequest', 'model/ExtractEntitiesResponse', 'model/GetWordsRequest', 'model/GetWordsResponse', 'model/LanguageDetectionRequest', 'model/LanguageDetectionResponse', 'model/LanguageTranslationRequest', 'model/LanguageTranslationResponse', 'model/ParseRequest', 'model/ParseResponse', 'model/PosRequest', 'model/PosResponse', 'model/PosSentence', 'model/PosTaggedWord', 'model/RephraseRequest', 'model/RephraseResponse', 'model/RephrasedSentence', 'model/RephrasedSentenceOption', 'model/SentenceSegmentationRequest', 'model/SentenceSegmentationResponse', 'model/WordPosition', 'api/ExtractEntitiesApi', 'api/LanguageDetectionApi', 'api/LanguageTranslationApi', 'api/ParseApi', 'api/PosTaggerApi', 'api/RephraseApi', 'api/SegmentationApi', 'api/SpellcheckApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/CheckSentenceRequest'), require('./model/CheckSentenceResponse'), require('./model/CheckWordRequest'), require('./model/CheckWordResponse'), require('./model/CorrectWordInSentence'), require('./model/Entity'), require('./model/ExtractEntitiesRequest'), require('./model/ExtractEntitiesResponse'), require('./model/GetWordsRequest'), require('./model/GetWordsResponse'), require('./model/LanguageDetectionRequest'), require('./model/LanguageDetectionResponse'), require('./model/ParseRequest'), require('./model/ParseResponse'), require('./model/PosRequest'), require('./model/PosResponse'), require('./model/PosSentence'), require('./model/PosTaggedWord'), require('./model/SentenceSegmentationRequest'), require('./model/SentenceSegmentationResponse'), require('./model/WordPosition'), require('./api/ExtractEntitiesApi'), require('./api/LanguageDetectionApi'), require('./api/ParseApi'), require('./api/PosTaggerApi'), require('./api/SegmentationApi'), require('./api/SpellcheckApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/CheckSentenceRequest'), require('./model/CheckSentenceResponse'), require('./model/CheckWordRequest'), require('./model/CheckWordResponse'), require('./model/CorrectWordInSentence'), require('./model/Entity'), require('./model/ExtractEntitiesRequest'), require('./model/ExtractEntitiesResponse'), require('./model/GetWordsRequest'), require('./model/GetWordsResponse'), require('./model/LanguageDetectionRequest'), require('./model/LanguageDetectionResponse'), require('./model/LanguageTranslationRequest'), require('./model/LanguageTranslationResponse'), require('./model/ParseRequest'), require('./model/ParseResponse'), require('./model/PosRequest'), require('./model/PosResponse'), require('./model/PosSentence'), require('./model/PosTaggedWord'), require('./model/RephraseRequest'), require('./model/RephraseResponse'), require('./model/RephrasedSentence'), require('./model/RephrasedSentenceOption'), require('./model/SentenceSegmentationRequest'), require('./model/SentenceSegmentationResponse'), require('./model/WordPosition'), require('./api/ExtractEntitiesApi'), require('./api/LanguageDetectionApi'), require('./api/LanguageTranslationApi'), require('./api/ParseApi'), require('./api/PosTaggerApi'), require('./api/RephraseApi'), require('./api/SegmentationApi'), require('./api/SpellcheckApi'));
   }
-}(function(ApiClient, CheckSentenceRequest, CheckSentenceResponse, CheckWordRequest, CheckWordResponse, CorrectWordInSentence, Entity, ExtractEntitiesRequest, ExtractEntitiesResponse, GetWordsRequest, GetWordsResponse, LanguageDetectionRequest, LanguageDetectionResponse, ParseRequest, ParseResponse, PosRequest, PosResponse, PosSentence, PosTaggedWord, SentenceSegmentationRequest, SentenceSegmentationResponse, WordPosition, ExtractEntitiesApi, LanguageDetectionApi, ParseApi, PosTaggerApi, SegmentationApi, SpellcheckApi) {
+}(function(ApiClient, CheckSentenceRequest, CheckSentenceResponse, CheckWordRequest, CheckWordResponse, CorrectWordInSentence, Entity, ExtractEntitiesRequest, ExtractEntitiesResponse, GetWordsRequest, GetWordsResponse, LanguageDetectionRequest, LanguageDetectionResponse, LanguageTranslationRequest, LanguageTranslationResponse, ParseRequest, ParseResponse, PosRequest, PosResponse, PosSentence, PosTaggedWord, RephraseRequest, RephraseResponse, RephrasedSentence, RephrasedSentenceOption, SentenceSegmentationRequest, SentenceSegmentationResponse, WordPosition, ExtractEntitiesApi, LanguageDetectionApi, LanguageTranslationApi, ParseApi, PosTaggerApi, RephraseApi, SegmentationApi, SpellcheckApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 2.0.2
+   * @version 2.0.3
    */
   var exports = {
     /**
@@ -122,6 +122,16 @@
      */
     LanguageDetectionResponse: LanguageDetectionResponse,
     /**
+     * The LanguageTranslationRequest model constructor.
+     * @property {module:model/LanguageTranslationRequest}
+     */
+    LanguageTranslationRequest: LanguageTranslationRequest,
+    /**
+     * The LanguageTranslationResponse model constructor.
+     * @property {module:model/LanguageTranslationResponse}
+     */
+    LanguageTranslationResponse: LanguageTranslationResponse,
+    /**
      * The ParseRequest model constructor.
      * @property {module:model/ParseRequest}
      */
@@ -152,6 +162,26 @@
      */
     PosTaggedWord: PosTaggedWord,
     /**
+     * The RephraseRequest model constructor.
+     * @property {module:model/RephraseRequest}
+     */
+    RephraseRequest: RephraseRequest,
+    /**
+     * The RephraseResponse model constructor.
+     * @property {module:model/RephraseResponse}
+     */
+    RephraseResponse: RephraseResponse,
+    /**
+     * The RephrasedSentence model constructor.
+     * @property {module:model/RephrasedSentence}
+     */
+    RephrasedSentence: RephrasedSentence,
+    /**
+     * The RephrasedSentenceOption model constructor.
+     * @property {module:model/RephrasedSentenceOption}
+     */
+    RephrasedSentenceOption: RephrasedSentenceOption,
+    /**
      * The SentenceSegmentationRequest model constructor.
      * @property {module:model/SentenceSegmentationRequest}
      */
@@ -177,6 +207,11 @@
      */
     LanguageDetectionApi: LanguageDetectionApi,
     /**
+     * The LanguageTranslationApi service constructor.
+     * @property {module:api/LanguageTranslationApi}
+     */
+    LanguageTranslationApi: LanguageTranslationApi,
+    /**
      * The ParseApi service constructor.
      * @property {module:api/ParseApi}
      */
@@ -186,6 +221,11 @@
      * @property {module:api/PosTaggerApi}
      */
     PosTaggerApi: PosTaggerApi,
+    /**
+     * The RephraseApi service constructor.
+     * @property {module:api/RephraseApi}
+     */
+    RephraseApi: RephraseApi,
     /**
      * The SegmentationApi service constructor.
      * @property {module:api/SegmentationApi}

@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ParseRequest', 'model/ParseResponse'], factory);
+    define(['ApiClient', 'model/RephraseRequest', 'model/RephraseResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ParseRequest'), require('../model/ParseResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/RephraseRequest'), require('../model/RephraseResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.ParseApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.ParseRequest, root.CloudmersiveNlpApiClient.ParseResponse);
+    root.CloudmersiveNlpApiClient.RephraseApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.RephraseRequest, root.CloudmersiveNlpApiClient.RephraseResponse);
   }
-}(this, function(ApiClient, ParseRequest, ParseResponse) {
+}(this, function(ApiClient, RephraseRequest, RephraseResponse) {
   'use strict';
 
   /**
-   * Parse service.
-   * @module api/ParseApi
+   * Rephrase service.
+   * @module api/RephraseApi
    * @version 2.0.3
    */
 
   /**
-   * Constructs a new ParseApi. 
-   * @alias module:api/ParseApi
+   * Constructs a new RephraseApi. 
+   * @alias module:api/RephraseApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,26 +48,26 @@
 
 
     /**
-     * Callback function to receive the result of the parseParseString operation.
-     * @callback module:api/ParseApi~parseParseStringCallback
+     * Callback function to receive the result of the rephraseTranslateDeuToEng operation.
+     * @callback module:api/RephraseApi~rephraseTranslateDeuToEngCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ParseResponse} data The data returned by the service call.
+     * @param {module:model/RephraseResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Parse string to syntax tree
-     * Parses the input string into a Penn Treebank syntax tree
-     * @param {module:model/ParseRequest} input Input string
-     * @param {module:api/ParseApi~parseParseStringCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ParseResponse}
+     * Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+     * Automatically rephrases or paraphrases input text in English sentence by sentence using advanced Deep Learning and Neural NLP.  Creates multiple reprhasing candidates per input sentence, from 1 to 10 possible rephrasings of the original sentence.  Seeks to preserve original semantic meaning in rephrased output candidates.  Consumes 1-2 API calls per output rephrasing option generated, per sentence.
+     * @param {module:model/RephraseRequest} input Input rephrase request
+     * @param {module:api/RephraseApi~rephraseTranslateDeuToEngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RephraseResponse}
      */
-    this.parseParseString = function(input, callback) {
+    this.rephraseTranslateDeuToEng = function(input, callback) {
       var postBody = input;
 
       // verify the required parameter 'input' is set
       if (input === undefined || input === null) {
-        throw new Error("Missing the required parameter 'input' when calling parseParseString");
+        throw new Error("Missing the required parameter 'input' when calling rephraseTranslateDeuToEng");
       }
 
 
@@ -85,10 +85,10 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = ParseResponse;
+      var returnType = RephraseResponse;
 
       return this.apiClient.callApi(
-        '/nlp-v2/parse/tree', 'POST',
+        '/nlp-v2/rephrase/rephrase/eng/by-sentence', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

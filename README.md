@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.2
+- Package version: 2.0.3
 
 
 ## Installation
@@ -127,6 +127,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CloudmersiveNlpApiClient.ExtractEntitiesApi* | [**extractEntitiesPost**](docs/ExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *CloudmersiveNlpApiClient.LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
+*CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
+*CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateEngToDeu**](docs/LanguageTranslationApi.md#languageTranslationTranslateEngToDeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
 *CloudmersiveNlpApiClient.ParseApi* | [**parseParseString**](docs/ParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagAdjectives**](docs/PosTaggerApi.md#posTaggerTagAdjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagAdverbs**](docs/PosTaggerApi.md#posTaggerTagAdverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
@@ -134,6 +136,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagPronouns**](docs/PosTaggerApi.md#posTaggerTagPronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagSentence**](docs/PosTaggerApi.md#posTaggerTagSentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagVerbs**](docs/PosTaggerApi.md#posTaggerTagVerbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
+*CloudmersiveNlpApiClient.RephraseApi* | [**rephraseTranslateDeuToEng**](docs/RephraseApi.md#rephraseTranslateDeuToEng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *CloudmersiveNlpApiClient.SegmentationApi* | [**segmentationGetSentences**](docs/SegmentationApi.md#segmentationGetSentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *CloudmersiveNlpApiClient.SegmentationApi* | [**segmentationGetWords**](docs/SegmentationApi.md#segmentationGetWords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *CloudmersiveNlpApiClient.SpellcheckApi* | [**spellcheckCheckSentence**](docs/SpellcheckApi.md#spellcheckCheckSentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -154,12 +157,18 @@ Class | Method | HTTP request | Description
  - [CloudmersiveNlpApiClient.GetWordsResponse](docs/GetWordsResponse.md)
  - [CloudmersiveNlpApiClient.LanguageDetectionRequest](docs/LanguageDetectionRequest.md)
  - [CloudmersiveNlpApiClient.LanguageDetectionResponse](docs/LanguageDetectionResponse.md)
+ - [CloudmersiveNlpApiClient.LanguageTranslationRequest](docs/LanguageTranslationRequest.md)
+ - [CloudmersiveNlpApiClient.LanguageTranslationResponse](docs/LanguageTranslationResponse.md)
  - [CloudmersiveNlpApiClient.ParseRequest](docs/ParseRequest.md)
  - [CloudmersiveNlpApiClient.ParseResponse](docs/ParseResponse.md)
  - [CloudmersiveNlpApiClient.PosRequest](docs/PosRequest.md)
  - [CloudmersiveNlpApiClient.PosResponse](docs/PosResponse.md)
  - [CloudmersiveNlpApiClient.PosSentence](docs/PosSentence.md)
  - [CloudmersiveNlpApiClient.PosTaggedWord](docs/PosTaggedWord.md)
+ - [CloudmersiveNlpApiClient.RephraseRequest](docs/RephraseRequest.md)
+ - [CloudmersiveNlpApiClient.RephraseResponse](docs/RephraseResponse.md)
+ - [CloudmersiveNlpApiClient.RephrasedSentence](docs/RephrasedSentence.md)
+ - [CloudmersiveNlpApiClient.RephrasedSentenceOption](docs/RephrasedSentenceOption.md)
  - [CloudmersiveNlpApiClient.SentenceSegmentationRequest](docs/SentenceSegmentationRequest.md)
  - [CloudmersiveNlpApiClient.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
  - [CloudmersiveNlpApiClient.WordPosition](docs/WordPosition.md)

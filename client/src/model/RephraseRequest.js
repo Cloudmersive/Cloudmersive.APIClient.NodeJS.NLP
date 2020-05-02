@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.PosRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.RephraseRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,55 @@
 
 
   /**
-   * The PosRequest model module.
-   * @module model/PosRequest
+   * The RephraseRequest model module.
+   * @module model/RephraseRequest
    * @version 2.0.3
    */
 
   /**
-   * Constructs a new <code>PosRequest</code>.
-   * Part of speech tagging request
-   * @alias module:model/PosRequest
+   * Constructs a new <code>RephraseRequest</code>.
+   * Input to a text rephrasing operation
+   * @alias module:model/RephraseRequest
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>PosRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>RephraseRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PosRequest} obj Optional instance to populate.
-   * @return {module:model/PosRequest} The populated <code>PosRequest</code> instance.
+   * @param {module:model/RephraseRequest} obj Optional instance to populate.
+   * @return {module:model/RephraseRequest} The populated <code>RephraseRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('InputText')) {
-        obj['InputText'] = ApiClient.convertToType(data['InputText'], 'String');
+      if (data.hasOwnProperty('TextToTranslate')) {
+        obj['TextToTranslate'] = ApiClient.convertToType(data['TextToTranslate'], 'String');
+      }
+      if (data.hasOwnProperty('TargetRephrasingCount')) {
+        obj['TargetRephrasingCount'] = ApiClient.convertToType(data['TargetRephrasingCount'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * Input text string
-   * @member {String} InputText
+   * Text to rephrase
+   * @member {String} TextToTranslate
    */
-  exports.prototype['InputText'] = undefined;
+  exports.prototype['TextToTranslate'] = undefined;
+  /**
+   * The number of rephrasing output options you would like per sentence; possible values are 1 to 10.  Default is 2.
+   * @member {Number} TargetRephrasingCount
+   */
+  exports.prototype['TargetRephrasingCount'] = undefined;
 
 
 

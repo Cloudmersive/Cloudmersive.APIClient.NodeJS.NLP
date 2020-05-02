@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetWordsRequest', 'model/GetWordsResponse', 'model/SentenceSegmentationRequest', 'model/SentenceSegmentationResponse'], factory);
+    define(['ApiClient', 'model/LanguageTranslationRequest', 'model/LanguageTranslationResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GetWordsRequest'), require('../model/GetWordsResponse'), require('../model/SentenceSegmentationRequest'), require('../model/SentenceSegmentationResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/LanguageTranslationRequest'), require('../model/LanguageTranslationResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.SegmentationApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.GetWordsRequest, root.CloudmersiveNlpApiClient.GetWordsResponse, root.CloudmersiveNlpApiClient.SentenceSegmentationRequest, root.CloudmersiveNlpApiClient.SentenceSegmentationResponse);
+    root.CloudmersiveNlpApiClient.LanguageTranslationApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.LanguageTranslationRequest, root.CloudmersiveNlpApiClient.LanguageTranslationResponse);
   }
-}(this, function(ApiClient, GetWordsRequest, GetWordsResponse, SentenceSegmentationRequest, SentenceSegmentationResponse) {
+}(this, function(ApiClient, LanguageTranslationRequest, LanguageTranslationResponse) {
   'use strict';
 
   /**
-   * Segmentation service.
-   * @module api/SegmentationApi
+   * LanguageTranslation service.
+   * @module api/LanguageTranslationApi
    * @version 2.0.3
    */
 
   /**
-   * Constructs a new SegmentationApi. 
-   * @alias module:api/SegmentationApi
+   * Constructs a new LanguageTranslationApi. 
+   * @alias module:api/LanguageTranslationApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,26 +48,26 @@
 
 
     /**
-     * Callback function to receive the result of the segmentationGetSentences operation.
-     * @callback module:api/SegmentationApi~segmentationGetSentencesCallback
+     * Callback function to receive the result of the languageTranslationTranslateDeuToEng operation.
+     * @callback module:api/LanguageTranslationApi~languageTranslationTranslateDeuToEngCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SentenceSegmentationResponse} data The data returned by the service call.
+     * @param {module:model/LanguageTranslationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Extract sentences from string
-     * Segment an input string into separate sentences, output result as a string.
-     * @param {module:model/SentenceSegmentationRequest} input Input string
-     * @param {module:api/SegmentationApi~segmentationGetSentencesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SentenceSegmentationResponse}
+     * Translate German to English text with Deep Learning AI
+     * Automatically translates input text in German to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param {module:model/LanguageTranslationRequest} input Input translation request
+     * @param {module:api/LanguageTranslationApi~languageTranslationTranslateDeuToEngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LanguageTranslationResponse}
      */
-    this.segmentationGetSentences = function(input, callback) {
+    this.languageTranslationTranslateDeuToEng = function(input, callback) {
       var postBody = input;
 
       // verify the required parameter 'input' is set
       if (input === undefined || input === null) {
-        throw new Error("Missing the required parameter 'input' when calling segmentationGetSentences");
+        throw new Error("Missing the required parameter 'input' when calling languageTranslationTranslateDeuToEng");
       }
 
 
@@ -85,36 +85,36 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = SentenceSegmentationResponse;
+      var returnType = LanguageTranslationResponse;
 
       return this.apiClient.callApi(
-        '/nlp-v2/segmentation/sentences', 'POST',
+        '/nlp-v2/translate/language/deu/to/eng', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the segmentationGetWords operation.
-     * @callback module:api/SegmentationApi~segmentationGetWordsCallback
+     * Callback function to receive the result of the languageTranslationTranslateEngToDeu operation.
+     * @callback module:api/LanguageTranslationApi~languageTranslationTranslateEngToDeuCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GetWordsResponse} data The data returned by the service call.
+     * @param {module:model/LanguageTranslationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get words in input string
-     * Get the component words in an input string
-     * @param {module:model/GetWordsRequest} input String to process
-     * @param {module:api/SegmentationApi~segmentationGetWordsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetWordsResponse}
+     * Translate English to German text with Deep Learning AI
+     * Automatically translates input text in English to output text in German using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param {module:model/LanguageTranslationRequest} input Input translation request
+     * @param {module:api/LanguageTranslationApi~languageTranslationTranslateEngToDeuCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LanguageTranslationResponse}
      */
-    this.segmentationGetWords = function(input, callback) {
+    this.languageTranslationTranslateEngToDeu = function(input, callback) {
       var postBody = input;
 
       // verify the required parameter 'input' is set
       if (input === undefined || input === null) {
-        throw new Error("Missing the required parameter 'input' when calling segmentationGetWords");
+        throw new Error("Missing the required parameter 'input' when calling languageTranslationTranslateEngToDeu");
       }
 
 
@@ -132,10 +132,10 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = GetWordsResponse;
+      var returnType = LanguageTranslationResponse;
 
       return this.apiClient.callApi(
-        '/nlp-v2/segmentation/words', 'POST',
+        '/nlp-v2/translate/language/eng/to/deu', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
