@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.3
+- Package version: 2.0.4
 
 
 ## Installation
@@ -129,6 +129,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveNlpApiClient.LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
 *CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateEngToDeu**](docs/LanguageTranslationApi.md#languageTranslationTranslateEngToDeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
+*CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateEngToRus**](docs/LanguageTranslationApi.md#languageTranslationTranslateEngToRus) | **POST** /nlp-v2/translate/language/eng/to/rus | Translate English to Russian text with Deep Learning AI
+*CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateRusToEng**](docs/LanguageTranslationApi.md#languageTranslationTranslateRusToEng) | **POST** /nlp-v2/translate/language/rus/to/eng | Translate Russian to English text with Deep Learning AI
 *CloudmersiveNlpApiClient.ParseApi* | [**parseParseString**](docs/ParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagAdjectives**](docs/PosTaggerApi.md#posTaggerTagAdjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagAdverbs**](docs/PosTaggerApi.md#posTaggerTagAdverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs

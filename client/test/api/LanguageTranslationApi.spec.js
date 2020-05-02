@@ -70,6 +70,26 @@
         done();
       });
     });
+    describe('languageTranslationTranslateEngToRus', function() {
+      it('should call languageTranslationTranslateEngToRus successfully', function(done) {
+        //uncomment below and update the code to test languageTranslationTranslateEngToRus
+        //instance.languageTranslationTranslateEngToRus(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('languageTranslationTranslateRusToEng', function() {
+      it('should call languageTranslationTranslateRusToEng successfully', function(done) {
+        //uncomment below and update the code to test languageTranslationTranslateRusToEng
+        //instance.languageTranslationTranslateRusToEng(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

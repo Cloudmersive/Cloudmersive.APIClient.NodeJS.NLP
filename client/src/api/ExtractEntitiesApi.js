@@ -33,7 +33,7 @@
   /**
    * ExtractEntities service.
    * @module api/ExtractEntitiesApi
-   * @version 2.0.3
+   * @version 2.0.4
    */
 
   /**

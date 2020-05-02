@@ -33,7 +33,7 @@
   /**
    * LanguageTranslation service.
    * @module api/LanguageTranslationApi
-   * @version 2.0.3
+   * @version 2.0.4
    */
 
   /**
@@ -136,6 +136,100 @@
 
       return this.apiClient.callApi(
         '/nlp-v2/translate/language/eng/to/deu', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the languageTranslationTranslateEngToRus operation.
+     * @callback module:api/LanguageTranslationApi~languageTranslationTranslateEngToRusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LanguageTranslationResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Translate English to Russian text with Deep Learning AI
+     * Automatically translates input text in English to output text in Russian using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param {module:model/LanguageTranslationRequest} input Input translation request
+     * @param {module:api/LanguageTranslationApi~languageTranslationTranslateEngToRusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LanguageTranslationResponse}
+     */
+    this.languageTranslationTranslateEngToRus = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling languageTranslationTranslateEngToRus");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = LanguageTranslationResponse;
+
+      return this.apiClient.callApi(
+        '/nlp-v2/translate/language/eng/to/rus', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the languageTranslationTranslateRusToEng operation.
+     * @callback module:api/LanguageTranslationApi~languageTranslationTranslateRusToEngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LanguageTranslationResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Translate Russian to English text with Deep Learning AI
+     * Automatically translates input text in Russian to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param {module:model/LanguageTranslationRequest} input Input translation request
+     * @param {module:api/LanguageTranslationApi~languageTranslationTranslateRusToEngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LanguageTranslationResponse}
+     */
+    this.languageTranslationTranslateRusToEng = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling languageTranslationTranslateRusToEng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = LanguageTranslationResponse;
+
+      return this.apiClient.callApi(
+        '/nlp-v2/translate/language/rus/to/eng', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
