@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RephrasedSentence'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./RephrasedSentence'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.RephraseResponse = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.RephrasedSentence);
+    root.CloudmersiveNlpApiClient.SentimentAnalysisResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
-}(this, function(ApiClient, RephrasedSentence) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The RephraseResponse model module.
-   * @module model/RephraseResponse
+   * The SentimentAnalysisResponse model module.
+   * @module model/SentimentAnalysisResponse
    * @version 2.0.5
    */
 
   /**
-   * Constructs a new <code>RephraseResponse</code>.
-   * Output of a text rephrasing operation
-   * @alias module:model/RephraseResponse
+   * Constructs a new <code>SentimentAnalysisResponse</code>.
+   * Output of a sentiment analysis operation
+   * @alias module:model/SentimentAnalysisResponse
    * @class
    */
   var exports = function() {
@@ -51,14 +51,15 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>RephraseResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SentimentAnalysisResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RephraseResponse} obj Optional instance to populate.
-   * @return {module:model/RephraseResponse} The populated <code>RephraseResponse</code> instance.
+   * @param {module:model/SentimentAnalysisResponse} obj Optional instance to populate.
+   * @return {module:model/SentimentAnalysisResponse} The populated <code>SentimentAnalysisResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -67,8 +68,11 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('RephrasedResults')) {
-        obj['RephrasedResults'] = ApiClient.convertToType(data['RephrasedResults'], [RephrasedSentence]);
+      if (data.hasOwnProperty('SentimentClassificationResult')) {
+        obj['SentimentClassificationResult'] = ApiClient.convertToType(data['SentimentClassificationResult'], 'String');
+      }
+      if (data.hasOwnProperty('SentimentScoreResult')) {
+        obj['SentimentScoreResult'] = ApiClient.convertToType(data['SentimentScoreResult'], 'Number');
       }
       if (data.hasOwnProperty('SentenceCount')) {
         obj['SentenceCount'] = ApiClient.convertToType(data['SentenceCount'], 'Number');
@@ -83,10 +87,15 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Results of the rephrasing, paraphrasing operation, in the order of the input sentences
-   * @member {Array.<module:model/RephrasedSentence>} RephrasedResults
+   * Classification of input text into a sentiment classification; possible values are \"Positive\", \"Negative\" or \"Neutral\"
+   * @member {String} SentimentClassificationResult
    */
-  exports.prototype['RephrasedResults'] = undefined;
+  exports.prototype['SentimentClassificationResult'] = undefined;
+  /**
+   * Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.
+   * @member {Number} SentimentScoreResult
+   */
+  exports.prototype['SentimentScoreResult'] = undefined;
   /**
    * Number of sentences in input text
    * @member {Number} SentenceCount

@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.4
+- Package version: 2.0.5
 
 
 ## Installation
@@ -103,9 +103,9 @@ Apikey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Apikey.apiKeyPrefix['Apikey'] = "Token"
 
-var api = new CloudmersiveNlpApiClient.ExtractEntitiesApi()
+var api = new CloudmersiveNlpApiClient.AnalyticsApi()
 
-var value = new CloudmersiveNlpApiClient.ExtractEntitiesRequest(); // {ExtractEntitiesRequest} Input string
+var input = new CloudmersiveNlpApiClient.SentimentAnalysisRequest(); // {SentimentAnalysisRequest} Input sentiment analysis request
 
 
 var callback = function(error, data, response) {
@@ -115,7 +115,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.extractEntitiesPost(value, callback);
+api.analyticsSentiment(input, callback);
 
 ```
 
@@ -125,6 +125,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSentiment**](docs/AnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *CloudmersiveNlpApiClient.ExtractEntitiesApi* | [**extractEntitiesPost**](docs/ExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *CloudmersiveNlpApiClient.LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -173,6 +174,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveNlpApiClient.RephrasedSentenceOption](docs/RephrasedSentenceOption.md)
  - [CloudmersiveNlpApiClient.SentenceSegmentationRequest](docs/SentenceSegmentationRequest.md)
  - [CloudmersiveNlpApiClient.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
+ - [CloudmersiveNlpApiClient.SentimentAnalysisRequest](docs/SentimentAnalysisRequest.md)
+ - [CloudmersiveNlpApiClient.SentimentAnalysisResponse](docs/SentimentAnalysisResponse.md)
  - [CloudmersiveNlpApiClient.WordPosition](docs/WordPosition.md)
 
 

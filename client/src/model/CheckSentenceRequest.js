@@ -36,7 +36,7 @@
   /**
    * The CheckSentenceRequest model module.
    * @module model/CheckSentenceRequest
-   * @version 2.0.4
+   * @version 2.0.5
    */
 
   /**

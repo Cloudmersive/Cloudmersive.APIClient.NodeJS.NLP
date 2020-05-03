@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.CheckWordRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.SentimentAnalysisRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,14 +34,15 @@
 
 
   /**
-   * The CheckWordRequest model module.
-   * @module model/CheckWordRequest
+   * The SentimentAnalysisRequest model module.
+   * @module model/SentimentAnalysisRequest
    * @version 2.0.5
    */
 
   /**
-   * Constructs a new <code>CheckWordRequest</code>.
-   * @alias module:model/CheckWordRequest
+   * Constructs a new <code>SentimentAnalysisRequest</code>.
+   * Input to a sentiment analysis operation
+   * @alias module:model/SentimentAnalysisRequest
    * @class
    */
   var exports = function() {
@@ -51,27 +52,28 @@
   };
 
   /**
-   * Constructs a <code>CheckWordRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SentimentAnalysisRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CheckWordRequest} obj Optional instance to populate.
-   * @return {module:model/CheckWordRequest} The populated <code>CheckWordRequest</code> instance.
+   * @param {module:model/SentimentAnalysisRequest} obj Optional instance to populate.
+   * @return {module:model/SentimentAnalysisRequest} The populated <code>SentimentAnalysisRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Word')) {
-        obj['Word'] = ApiClient.convertToType(data['Word'], 'String');
+      if (data.hasOwnProperty('TextToAnalyze')) {
+        obj['TextToAnalyze'] = ApiClient.convertToType(data['TextToAnalyze'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} Word
+   * Text to analyze
+   * @member {String} TextToAnalyze
    */
-  exports.prototype['Word'] = undefined;
+  exports.prototype['TextToAnalyze'] = undefined;
 
 
 

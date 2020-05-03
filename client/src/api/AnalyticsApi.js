@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RephraseRequest', 'model/RephraseResponse'], factory);
+    define(['ApiClient', 'model/SentimentAnalysisRequest', 'model/SentimentAnalysisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/RephraseRequest'), require('../model/RephraseResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/SentimentAnalysisRequest'), require('../model/SentimentAnalysisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.RephraseApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.RephraseRequest, root.CloudmersiveNlpApiClient.RephraseResponse);
+    root.CloudmersiveNlpApiClient.AnalyticsApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.SentimentAnalysisRequest, root.CloudmersiveNlpApiClient.SentimentAnalysisResponse);
   }
-}(this, function(ApiClient, RephraseRequest, RephraseResponse) {
+}(this, function(ApiClient, SentimentAnalysisRequest, SentimentAnalysisResponse) {
   'use strict';
 
   /**
-   * Rephrase service.
-   * @module api/RephraseApi
+   * Analytics service.
+   * @module api/AnalyticsApi
    * @version 2.0.5
    */
 
   /**
-   * Constructs a new RephraseApi. 
-   * @alias module:api/RephraseApi
+   * Constructs a new AnalyticsApi. 
+   * @alias module:api/AnalyticsApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,26 +48,26 @@
 
 
     /**
-     * Callback function to receive the result of the rephraseTranslateDeuToEng operation.
-     * @callback module:api/RephraseApi~rephraseTranslateDeuToEngCallback
+     * Callback function to receive the result of the analyticsSentiment operation.
+     * @callback module:api/AnalyticsApi~analyticsSentimentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RephraseResponse} data The data returned by the service call.
+     * @param {module:model/SentimentAnalysisResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
-     * Automatically rephrases or paraphrases input text in English sentence by sentence using advanced Deep Learning and Neural NLP.  Creates multiple reprhasing candidates per input sentence, from 1 to 10 possible rephrasings of the original sentence.  Seeks to preserve original semantic meaning in rephrased output candidates.  Consumes 1-2 API calls per output rephrasing option generated, per sentence.
-     * @param {module:model/RephraseRequest} input Input rephrase request
-     * @param {module:api/RephraseApi~rephraseTranslateDeuToEngCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RephraseResponse}
+     * Perform Sentiment Analysis and Classification on Text
+     * Analyze input text using advanced Sentiment Analysis to determine if the input is positive, negative, or neutral.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     * @param {module:model/SentimentAnalysisRequest} input Input sentiment analysis request
+     * @param {module:api/AnalyticsApi~analyticsSentimentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SentimentAnalysisResponse}
      */
-    this.rephraseTranslateDeuToEng = function(input, callback) {
+    this.analyticsSentiment = function(input, callback) {
       var postBody = input;
 
       // verify the required parameter 'input' is set
       if (input === undefined || input === null) {
-        throw new Error("Missing the required parameter 'input' when calling rephraseTranslateDeuToEng");
+        throw new Error("Missing the required parameter 'input' when calling analyticsSentiment");
       }
 
 
@@ -85,10 +85,10 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = RephraseResponse;
+      var returnType = SentimentAnalysisResponse;
 
       return this.apiClient.callApi(
-        '/nlp-v2/rephrase/rephrase/eng/by-sentence', 'POST',
+        '/nlp-v2/analytics/sentiment', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
