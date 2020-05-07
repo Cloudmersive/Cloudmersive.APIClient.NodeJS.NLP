@@ -36,7 +36,7 @@
   /**
    * The CheckWordResponse model module.
    * @module model/CheckWordResponse
-   * @version 2.0.5
+   * @version 2.0.6
    */
 
   /**

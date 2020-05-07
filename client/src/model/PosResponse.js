@@ -36,7 +36,7 @@
   /**
    * The PosResponse model module.
    * @module model/PosResponse
-   * @version 2.0.5
+   * @version 2.0.6
    */
 
   /**

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SentimentAnalysisRequest', 'model/SentimentAnalysisResponse'], factory);
+    define(['ApiClient', 'model/ProfanityAnalysisRequest', 'model/ProfanityAnalysisResponse', 'model/SentimentAnalysisRequest', 'model/SentimentAnalysisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SentimentAnalysisRequest'), require('../model/SentimentAnalysisResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ProfanityAnalysisRequest'), require('../model/ProfanityAnalysisResponse'), require('../model/SentimentAnalysisRequest'), require('../model/SentimentAnalysisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.AnalyticsApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.SentimentAnalysisRequest, root.CloudmersiveNlpApiClient.SentimentAnalysisResponse);
+    root.CloudmersiveNlpApiClient.AnalyticsApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.ProfanityAnalysisRequest, root.CloudmersiveNlpApiClient.ProfanityAnalysisResponse, root.CloudmersiveNlpApiClient.SentimentAnalysisRequest, root.CloudmersiveNlpApiClient.SentimentAnalysisResponse);
   }
-}(this, function(ApiClient, SentimentAnalysisRequest, SentimentAnalysisResponse) {
+}(this, function(ApiClient, ProfanityAnalysisRequest, ProfanityAnalysisResponse, SentimentAnalysisRequest, SentimentAnalysisResponse) {
   'use strict';
 
   /**
    * Analytics service.
    * @module api/AnalyticsApi
-   * @version 2.0.5
+   * @version 2.0.6
    */
 
   /**
@@ -46,6 +46,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the analyticsProfanity operation.
+     * @callback module:api/AnalyticsApi~analyticsProfanityCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ProfanityAnalysisResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Perform Profanity and Obscene Language Analysis and Detection on Text
+     * Analyze input text using advanced Profanity and Obscene Language Analysis to determine if the input contains profane language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     * @param {module:model/ProfanityAnalysisRequest} input Input profanity analysis request
+     * @param {module:api/AnalyticsApi~analyticsProfanityCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ProfanityAnalysisResponse}
+     */
+    this.analyticsProfanity = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling analyticsProfanity");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ProfanityAnalysisResponse;
+
+      return this.apiClient.callApi(
+        '/nlp-v2/analytics/profanity', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the analyticsSentiment operation.

@@ -36,7 +36,7 @@
   /**
    * The RephrasedSentenceOption model module.
    * @module model/RephrasedSentenceOption
-   * @version 2.0.5
+   * @version 2.0.6
    */
 
   /**

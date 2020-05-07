@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.CheckSentenceRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.ProfanityAnalysisRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The CheckSentenceRequest model module.
-   * @module model/CheckSentenceRequest
+   * The ProfanityAnalysisRequest model module.
+   * @module model/ProfanityAnalysisRequest
    * @version 2.0.6
    */
 
   /**
-   * Constructs a new <code>CheckSentenceRequest</code>.
-   * Input object for spell checking
-   * @alias module:model/CheckSentenceRequest
+   * Constructs a new <code>ProfanityAnalysisRequest</code>.
+   * Input to a profanity analysis operation
+   * @alias module:model/ProfanityAnalysisRequest
    * @class
    */
   var exports = function() {
@@ -52,28 +52,28 @@
   };
 
   /**
-   * Constructs a <code>CheckSentenceRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ProfanityAnalysisRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CheckSentenceRequest} obj Optional instance to populate.
-   * @return {module:model/CheckSentenceRequest} The populated <code>CheckSentenceRequest</code> instance.
+   * @param {module:model/ProfanityAnalysisRequest} obj Optional instance to populate.
+   * @return {module:model/ProfanityAnalysisRequest} The populated <code>ProfanityAnalysisRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Sentence')) {
-        obj['Sentence'] = ApiClient.convertToType(data['Sentence'], 'String');
+      if (data.hasOwnProperty('TextToAnalyze')) {
+        obj['TextToAnalyze'] = ApiClient.convertToType(data['TextToAnalyze'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Input sentence for spell check
-   * @member {String} Sentence
+   * Text to analyze
+   * @member {String} TextToAnalyze
    */
-  exports.prototype['Sentence'] = undefined;
+  exports.prototype['TextToAnalyze'] = undefined;
 
 
 

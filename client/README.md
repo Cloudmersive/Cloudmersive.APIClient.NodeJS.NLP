@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.5
+- Package version: 2.0.6
 
 
 ## Installation
@@ -105,7 +105,7 @@ Apikey.apiKey = "YOUR API KEY"
 
 var api = new CloudmersiveNlpApiClient.AnalyticsApi()
 
-var input = new CloudmersiveNlpApiClient.SentimentAnalysisRequest(); // {SentimentAnalysisRequest} Input sentiment analysis request
+var input = new CloudmersiveNlpApiClient.ProfanityAnalysisRequest(); // {ProfanityAnalysisRequest} Input profanity analysis request
 
 
 var callback = function(error, data, response) {
@@ -115,7 +115,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.analyticsSentiment(input, callback);
+api.analyticsProfanity(input, callback);
 
 ```
 
@@ -125,6 +125,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsProfanity**](docs/AnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSentiment**](docs/AnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *CloudmersiveNlpApiClient.ExtractEntitiesApi* | [**extractEntitiesPost**](docs/ExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *CloudmersiveNlpApiClient.LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
@@ -168,6 +169,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveNlpApiClient.PosResponse](docs/PosResponse.md)
  - [CloudmersiveNlpApiClient.PosSentence](docs/PosSentence.md)
  - [CloudmersiveNlpApiClient.PosTaggedWord](docs/PosTaggedWord.md)
+ - [CloudmersiveNlpApiClient.ProfanityAnalysisRequest](docs/ProfanityAnalysisRequest.md)
+ - [CloudmersiveNlpApiClient.ProfanityAnalysisResponse](docs/ProfanityAnalysisResponse.md)
  - [CloudmersiveNlpApiClient.RephraseRequest](docs/RephraseRequest.md)
  - [CloudmersiveNlpApiClient.RephraseResponse](docs/RephraseResponse.md)
  - [CloudmersiveNlpApiClient.RephrasedSentence](docs/RephrasedSentence.md)

@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveNlpApiClient.AnalyticsApi();
+    instance = new CloudmersiveNlpApiClient.ProfanityAnalysisRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,19 @@
       object[property] = value;
   }
 
-  describe('AnalyticsApi', function() {
-    describe('analyticsProfanity', function() {
-      it('should call analyticsProfanity successfully', function(done) {
-        //uncomment below and update the code to test analyticsProfanity
-        //instance.analyticsProfanity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ProfanityAnalysisRequest', function() {
+    it('should create an instance of ProfanityAnalysisRequest', function() {
+      // uncomment below and update the code to test ProfanityAnalysisRequest
+      //var instane = new CloudmersiveNlpApiClient.ProfanityAnalysisRequest();
+      //expect(instance).to.be.a(CloudmersiveNlpApiClient.ProfanityAnalysisRequest);
     });
-    describe('analyticsSentiment', function() {
-      it('should call analyticsSentiment successfully', function(done) {
-        //uncomment below and update the code to test analyticsSentiment
-        //instance.analyticsSentiment(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property textToAnalyze (base name: "TextToAnalyze")', function() {
+      // uncomment below and update the code to test the property textToAnalyze
+      //var instane = new CloudmersiveNlpApiClient.ProfanityAnalysisRequest();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

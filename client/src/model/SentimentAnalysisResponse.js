@@ -36,7 +36,7 @@
   /**
    * The SentimentAnalysisResponse model module.
    * @module model/SentimentAnalysisResponse
-   * @version 2.0.5
+   * @version 2.0.6
    */
 
   /**
@@ -82,7 +82,7 @@
   }
 
   /**
-   * True if the language detection operation was successful, false otherwise
+   * True if the sentiment analysis operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;

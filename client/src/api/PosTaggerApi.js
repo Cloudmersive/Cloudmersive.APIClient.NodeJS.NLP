@@ -33,7 +33,7 @@
   /**
    * PosTagger service.
    * @module api/PosTaggerApi
-   * @version 2.0.5
+   * @version 2.0.6
    */
 
   /**

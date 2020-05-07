@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RephrasedSentence'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./RephrasedSentence'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.RephraseResponse = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.RephrasedSentence);
+    root.CloudmersiveNlpApiClient.ProfanityAnalysisResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
-}(this, function(ApiClient, RephrasedSentence) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The RephraseResponse model module.
-   * @module model/RephraseResponse
+   * The ProfanityAnalysisResponse model module.
+   * @module model/ProfanityAnalysisResponse
    * @version 2.0.6
    */
 
   /**
-   * Constructs a new <code>RephraseResponse</code>.
-   * Output of a text rephrasing operation
-   * @alias module:model/RephraseResponse
+   * Constructs a new <code>ProfanityAnalysisResponse</code>.
+   * Output of a profanity analysis operation
+   * @alias module:model/ProfanityAnalysisResponse
    * @class
    */
   var exports = function() {
@@ -54,11 +54,11 @@
   };
 
   /**
-   * Constructs a <code>RephraseResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ProfanityAnalysisResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RephraseResponse} obj Optional instance to populate.
-   * @return {module:model/RephraseResponse} The populated <code>RephraseResponse</code> instance.
+   * @param {module:model/ProfanityAnalysisResponse} obj Optional instance to populate.
+   * @return {module:model/ProfanityAnalysisResponse} The populated <code>ProfanityAnalysisResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -67,8 +67,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('RephrasedResults')) {
-        obj['RephrasedResults'] = ApiClient.convertToType(data['RephrasedResults'], [RephrasedSentence]);
+      if (data.hasOwnProperty('ProfanityScoreResult')) {
+        obj['ProfanityScoreResult'] = ApiClient.convertToType(data['ProfanityScoreResult'], 'Number');
       }
       if (data.hasOwnProperty('SentenceCount')) {
         obj['SentenceCount'] = ApiClient.convertToType(data['SentenceCount'], 'Number');
@@ -78,15 +78,15 @@
   }
 
   /**
-   * True if the language detection operation was successful, false otherwise
+   * True if the profanity detection operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Results of the rephrasing, paraphrasing operation, in the order of the input sentences
-   * @member {Array.<module:model/RephrasedSentence>} RephrasedResults
+   * Profanity classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being profane or contain obscene language, while scores close to 1.0 have a high probability of being profane or containing obscene language.  Values above 0.8 have a very high probability of being profane.
+   * @member {Number} ProfanityScoreResult
    */
-  exports.prototype['RephrasedResults'] = undefined;
+  exports.prototype['ProfanityScoreResult'] = undefined;
   /**
    * Number of sentences in input text
    * @member {Number} SentenceCount

@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveNlpApiClient.AnalyticsApi();
+    instance = new CloudmersiveNlpApiClient.ProfanityAnalysisResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,31 @@
       object[property] = value;
   }
 
-  describe('AnalyticsApi', function() {
-    describe('analyticsProfanity', function() {
-      it('should call analyticsProfanity successfully', function(done) {
-        //uncomment below and update the code to test analyticsProfanity
-        //instance.analyticsProfanity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ProfanityAnalysisResponse', function() {
+    it('should create an instance of ProfanityAnalysisResponse', function() {
+      // uncomment below and update the code to test ProfanityAnalysisResponse
+      //var instane = new CloudmersiveNlpApiClient.ProfanityAnalysisResponse();
+      //expect(instance).to.be.a(CloudmersiveNlpApiClient.ProfanityAnalysisResponse);
     });
-    describe('analyticsSentiment', function() {
-      it('should call analyticsSentiment successfully', function(done) {
-        //uncomment below and update the code to test analyticsSentiment
-        //instance.analyticsSentiment(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property successful (base name: "Successful")', function() {
+      // uncomment below and update the code to test the property successful
+      //var instane = new CloudmersiveNlpApiClient.ProfanityAnalysisResponse();
+      //expect(instance).to.be();
     });
+
+    it('should have the property profanityScoreResult (base name: "ProfanityScoreResult")', function() {
+      // uncomment below and update the code to test the property profanityScoreResult
+      //var instane = new CloudmersiveNlpApiClient.ProfanityAnalysisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sentenceCount (base name: "SentenceCount")', function() {
+      // uncomment below and update the code to test the property sentenceCount
+      //var instane = new CloudmersiveNlpApiClient.ProfanityAnalysisResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
