@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.SentimentAnalysisResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.SubjectivityAnalysisResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The SentimentAnalysisResponse model module.
-   * @module model/SentimentAnalysisResponse
+   * The SubjectivityAnalysisResponse model module.
+   * @module model/SubjectivityAnalysisResponse
    * @version 2.0.7
    */
 
   /**
-   * Constructs a new <code>SentimentAnalysisResponse</code>.
-   * Output of a sentiment analysis operation
-   * @alias module:model/SentimentAnalysisResponse
+   * Constructs a new <code>SubjectivityAnalysisResponse</code>.
+   * Output of a subjectivity analysis operation
+   * @alias module:model/SubjectivityAnalysisResponse
    * @class
    */
   var exports = function() {
@@ -51,15 +51,14 @@
 
 
 
-
   };
 
   /**
-   * Constructs a <code>SentimentAnalysisResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SubjectivityAnalysisResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SentimentAnalysisResponse} obj Optional instance to populate.
-   * @return {module:model/SentimentAnalysisResponse} The populated <code>SentimentAnalysisResponse</code> instance.
+   * @param {module:model/SubjectivityAnalysisResponse} obj Optional instance to populate.
+   * @return {module:model/SubjectivityAnalysisResponse} The populated <code>SubjectivityAnalysisResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -68,11 +67,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('SentimentClassificationResult')) {
-        obj['SentimentClassificationResult'] = ApiClient.convertToType(data['SentimentClassificationResult'], 'String');
-      }
-      if (data.hasOwnProperty('SentimentScoreResult')) {
-        obj['SentimentScoreResult'] = ApiClient.convertToType(data['SentimentScoreResult'], 'Number');
+      if (data.hasOwnProperty('SubjectivityScoreResult')) {
+        obj['SubjectivityScoreResult'] = ApiClient.convertToType(data['SubjectivityScoreResult'], 'Number');
       }
       if (data.hasOwnProperty('SentenceCount')) {
         obj['SentenceCount'] = ApiClient.convertToType(data['SentenceCount'], 'Number');
@@ -82,20 +78,15 @@
   }
 
   /**
-   * True if the sentiment analysis operation was successful, false otherwise
+   * True if the subjectivity analysis operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Classification of input text into a sentiment classification; possible values are \"Positive\", \"Negative\" or \"Neutral\"
-   * @member {String} SentimentClassificationResult
+   * Subjectivity vs. objectivity classification score between 0.0 and 1.0 where scores closer to zero have a high probability of objectivity, while scores close to 1.0 have a high probability of subjectivity.
+   * @member {Number} SubjectivityScoreResult
    */
-  exports.prototype['SentimentClassificationResult'] = undefined;
-  /**
-   * Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.
-   * @member {Number} SentimentScoreResult
-   */
-  exports.prototype['SentimentScoreResult'] = undefined;
+  exports.prototype['SubjectivityScoreResult'] = undefined;
   /**
    * Number of sentences in input text
    * @member {Number} SentenceCount

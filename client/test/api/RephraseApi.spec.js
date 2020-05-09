@@ -50,10 +50,10 @@
   }
 
   describe('RephraseApi', function() {
-    describe('rephraseTranslateDeuToEng', function() {
-      it('should call rephraseTranslateDeuToEng successfully', function(done) {
-        //uncomment below and update the code to test rephraseTranslateDeuToEng
-        //instance.rephraseTranslateDeuToEng(function(error) {
+    describe('rephraseEnglishRephraseSentenceBySentence', function() {
+      it('should call rephraseEnglishRephraseSentenceBySentence successfully', function(done) {
+        //uncomment below and update the code to test rephraseEnglishRephraseSentenceBySentence
+        //instance.rephraseEnglishRephraseSentenceBySentence(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

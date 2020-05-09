@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveNlpApiClient.AnalyticsApi();
+    instance = new CloudmersiveNlpApiClient.SubjectivityAnalysisRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,19 @@
       object[property] = value;
   }
 
-  describe('AnalyticsApi', function() {
-    describe('analyticsProfanity', function() {
-      it('should call analyticsProfanity successfully', function(done) {
-        //uncomment below and update the code to test analyticsProfanity
-        //instance.analyticsProfanity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('SubjectivityAnalysisRequest', function() {
+    it('should create an instance of SubjectivityAnalysisRequest', function() {
+      // uncomment below and update the code to test SubjectivityAnalysisRequest
+      //var instane = new CloudmersiveNlpApiClient.SubjectivityAnalysisRequest();
+      //expect(instance).to.be.a(CloudmersiveNlpApiClient.SubjectivityAnalysisRequest);
     });
-    describe('analyticsSentiment', function() {
-      it('should call analyticsSentiment successfully', function(done) {
-        //uncomment below and update the code to test analyticsSentiment
-        //instance.analyticsSentiment(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property textToAnalyze (base name: "TextToAnalyze")', function() {
+      // uncomment below and update the code to test the property textToAnalyze
+      //var instane = new CloudmersiveNlpApiClient.SubjectivityAnalysisRequest();
+      //expect(instance).to.be();
     });
-    describe('analyticsSubjectivity', function() {
-      it('should call analyticsSubjectivity successfully', function(done) {
-        //uncomment below and update the code to test analyticsSubjectivity
-        //instance.analyticsSubjectivity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

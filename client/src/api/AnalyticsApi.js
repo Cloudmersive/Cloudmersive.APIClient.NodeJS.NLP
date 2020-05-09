@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ProfanityAnalysisRequest', 'model/ProfanityAnalysisResponse', 'model/SentimentAnalysisRequest', 'model/SentimentAnalysisResponse'], factory);
+    define(['ApiClient', 'model/ProfanityAnalysisRequest', 'model/ProfanityAnalysisResponse', 'model/SentimentAnalysisRequest', 'model/SentimentAnalysisResponse', 'model/SubjectivityAnalysisRequest', 'model/SubjectivityAnalysisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ProfanityAnalysisRequest'), require('../model/ProfanityAnalysisResponse'), require('../model/SentimentAnalysisRequest'), require('../model/SentimentAnalysisResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ProfanityAnalysisRequest'), require('../model/ProfanityAnalysisResponse'), require('../model/SentimentAnalysisRequest'), require('../model/SentimentAnalysisResponse'), require('../model/SubjectivityAnalysisRequest'), require('../model/SubjectivityAnalysisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.AnalyticsApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.ProfanityAnalysisRequest, root.CloudmersiveNlpApiClient.ProfanityAnalysisResponse, root.CloudmersiveNlpApiClient.SentimentAnalysisRequest, root.CloudmersiveNlpApiClient.SentimentAnalysisResponse);
+    root.CloudmersiveNlpApiClient.AnalyticsApi = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.ProfanityAnalysisRequest, root.CloudmersiveNlpApiClient.ProfanityAnalysisResponse, root.CloudmersiveNlpApiClient.SentimentAnalysisRequest, root.CloudmersiveNlpApiClient.SentimentAnalysisResponse, root.CloudmersiveNlpApiClient.SubjectivityAnalysisRequest, root.CloudmersiveNlpApiClient.SubjectivityAnalysisResponse);
   }
-}(this, function(ApiClient, ProfanityAnalysisRequest, ProfanityAnalysisResponse, SentimentAnalysisRequest, SentimentAnalysisResponse) {
+}(this, function(ApiClient, ProfanityAnalysisRequest, ProfanityAnalysisResponse, SentimentAnalysisRequest, SentimentAnalysisResponse, SubjectivityAnalysisRequest, SubjectivityAnalysisResponse) {
   'use strict';
 
   /**
    * Analytics service.
    * @module api/AnalyticsApi
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**
@@ -136,6 +136,53 @@
 
       return this.apiClient.callApi(
         '/nlp-v2/analytics/sentiment', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the analyticsSubjectivity operation.
+     * @callback module:api/AnalyticsApi~analyticsSubjectivityCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SubjectivityAnalysisResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Perform Subjectivity and Objectivity Analysis on Text
+     * Analyze input text using advanced Subjectivity and Objectivity Language Analysis to determine if the input text is objective or subjective, and how much.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     * @param {module:model/SubjectivityAnalysisRequest} input Input subjectivity analysis request
+     * @param {module:api/AnalyticsApi~analyticsSubjectivityCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SubjectivityAnalysisResponse}
+     */
+    this.analyticsSubjectivity = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling analyticsSubjectivity");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = SubjectivityAnalysisResponse;
+
+      return this.apiClient.callApi(
+        '/nlp-v2/analytics/subjectivity', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

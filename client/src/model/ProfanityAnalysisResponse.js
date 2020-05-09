@@ -36,7 +36,7 @@
   /**
    * The ProfanityAnalysisResponse model module.
    * @module model/ProfanityAnalysisResponse
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**

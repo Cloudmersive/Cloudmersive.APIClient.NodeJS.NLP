@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.6
+- Package version: 2.0.7
 
 
 ## Installation
@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsProfanity**](docs/AnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSentiment**](docs/AnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSubjectivity**](docs/AnalyticsApi.md#analyticsSubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *CloudmersiveNlpApiClient.ExtractEntitiesApi* | [**extractEntitiesPost**](docs/ExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *CloudmersiveNlpApiClient.LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *CloudmersiveNlpApiClient.LanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -140,7 +141,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagPronouns**](docs/PosTaggerApi.md#posTaggerTagPronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagSentence**](docs/PosTaggerApi.md#posTaggerTagSentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *CloudmersiveNlpApiClient.PosTaggerApi* | [**posTaggerTagVerbs**](docs/PosTaggerApi.md#posTaggerTagVerbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
-*CloudmersiveNlpApiClient.RephraseApi* | [**rephraseTranslateDeuToEng**](docs/RephraseApi.md#rephraseTranslateDeuToEng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+*CloudmersiveNlpApiClient.RephraseApi* | [**rephraseEnglishRephraseSentenceBySentence**](docs/RephraseApi.md#rephraseEnglishRephraseSentenceBySentence) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *CloudmersiveNlpApiClient.SegmentationApi* | [**segmentationGetSentences**](docs/SegmentationApi.md#segmentationGetSentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *CloudmersiveNlpApiClient.SegmentationApi* | [**segmentationGetWords**](docs/SegmentationApi.md#segmentationGetWords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *CloudmersiveNlpApiClient.SpellcheckApi* | [**spellcheckCheckSentence**](docs/SpellcheckApi.md#spellcheckCheckSentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -179,6 +180,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveNlpApiClient.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
  - [CloudmersiveNlpApiClient.SentimentAnalysisRequest](docs/SentimentAnalysisRequest.md)
  - [CloudmersiveNlpApiClient.SentimentAnalysisResponse](docs/SentimentAnalysisResponse.md)
+ - [CloudmersiveNlpApiClient.SubjectivityAnalysisRequest](docs/SubjectivityAnalysisRequest.md)
+ - [CloudmersiveNlpApiClient.SubjectivityAnalysisResponse](docs/SubjectivityAnalysisResponse.md)
  - [CloudmersiveNlpApiClient.WordPosition](docs/WordPosition.md)
 
 

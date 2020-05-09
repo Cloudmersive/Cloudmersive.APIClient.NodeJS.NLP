@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveNlpApiClient.AnalyticsApi();
+    instance = new CloudmersiveNlpApiClient.SubjectivityAnalysisResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,31 @@
       object[property] = value;
   }
 
-  describe('AnalyticsApi', function() {
-    describe('analyticsProfanity', function() {
-      it('should call analyticsProfanity successfully', function(done) {
-        //uncomment below and update the code to test analyticsProfanity
-        //instance.analyticsProfanity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('SubjectivityAnalysisResponse', function() {
+    it('should create an instance of SubjectivityAnalysisResponse', function() {
+      // uncomment below and update the code to test SubjectivityAnalysisResponse
+      //var instane = new CloudmersiveNlpApiClient.SubjectivityAnalysisResponse();
+      //expect(instance).to.be.a(CloudmersiveNlpApiClient.SubjectivityAnalysisResponse);
     });
-    describe('analyticsSentiment', function() {
-      it('should call analyticsSentiment successfully', function(done) {
-        //uncomment below and update the code to test analyticsSentiment
-        //instance.analyticsSentiment(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property successful (base name: "Successful")', function() {
+      // uncomment below and update the code to test the property successful
+      //var instane = new CloudmersiveNlpApiClient.SubjectivityAnalysisResponse();
+      //expect(instance).to.be();
     });
-    describe('analyticsSubjectivity', function() {
-      it('should call analyticsSubjectivity successfully', function(done) {
-        //uncomment below and update the code to test analyticsSubjectivity
-        //instance.analyticsSubjectivity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property subjectivityScoreResult (base name: "SubjectivityScoreResult")', function() {
+      // uncomment below and update the code to test the property subjectivityScoreResult
+      //var instane = new CloudmersiveNlpApiClient.SubjectivityAnalysisResponse();
+      //expect(instance).to.be();
     });
+
+    it('should have the property sentenceCount (base name: "SentenceCount")', function() {
+      // uncomment below and update the code to test the property sentenceCount
+      //var instane = new CloudmersiveNlpApiClient.SubjectivityAnalysisResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

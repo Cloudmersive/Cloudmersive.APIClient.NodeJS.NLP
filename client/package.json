@@ -1,6 +1,6 @@
 {
   "name": "cloudmersive-nlp-api-client",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "The_powerful_Natural_Language_Processing_APIs__v2_let_you_perform_part_of_speech_tagging_entity_identification_sentence_parsing_and_much_more_to_help_you_understand_the_meaning_of_unstructured_text_",
   "license": "Unlicense",
   "main": "src/index.js",
