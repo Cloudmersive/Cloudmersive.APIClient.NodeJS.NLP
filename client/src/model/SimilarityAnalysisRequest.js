@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.ParseResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.SimilarityAnalysisRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,55 @@
 
 
   /**
-   * The ParseResponse model module.
-   * @module model/ParseResponse
+   * The SimilarityAnalysisRequest model module.
+   * @module model/SimilarityAnalysisRequest
    * @version 2.0.8
    */
 
   /**
-   * Constructs a new <code>ParseResponse</code>.
-   * Result of linguistic parse operation
-   * @alias module:model/ParseResponse
+   * Constructs a new <code>SimilarityAnalysisRequest</code>.
+   * Input to a similarity analysis operation
+   * @alias module:model/SimilarityAnalysisRequest
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>ParseResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SimilarityAnalysisRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ParseResponse} obj Optional instance to populate.
-   * @return {module:model/ParseResponse} The populated <code>ParseResponse</code> instance.
+   * @param {module:model/SimilarityAnalysisRequest} obj Optional instance to populate.
+   * @return {module:model/SimilarityAnalysisRequest} The populated <code>SimilarityAnalysisRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ParseTree')) {
-        obj['ParseTree'] = ApiClient.convertToType(data['ParseTree'], 'String');
+      if (data.hasOwnProperty('TextToAnalyze1')) {
+        obj['TextToAnalyze1'] = ApiClient.convertToType(data['TextToAnalyze1'], 'String');
+      }
+      if (data.hasOwnProperty('TextToAnalyze2')) {
+        obj['TextToAnalyze2'] = ApiClient.convertToType(data['TextToAnalyze2'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Parse tree in Penn Treebank syntax tree format
-   * @member {String} ParseTree
+   * First text to analyze
+   * @member {String} TextToAnalyze1
    */
-  exports.prototype['ParseTree'] = undefined;
+  exports.prototype['TextToAnalyze1'] = undefined;
+  /**
+   * Second text to analyze
+   * @member {String} TextToAnalyze2
+   */
+  exports.prototype['TextToAnalyze2'] = undefined;
 
 
 

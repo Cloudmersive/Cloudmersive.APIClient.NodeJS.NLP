@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json
 
 <a name="languageTranslationTranslateEngToDeu"></a>
 # **languageTranslationTranslateEngToDeu**
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json
 
 <a name="languageTranslationTranslateEngToRus"></a>
 # **languageTranslationTranslateEngToRus**
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json
 
 <a name="languageTranslationTranslateRusToEng"></a>
 # **languageTranslationTranslateRusToEng**
@@ -220,5 +220,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json
 

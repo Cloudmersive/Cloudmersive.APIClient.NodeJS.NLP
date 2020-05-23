@@ -33,7 +33,7 @@
   /**
    * Spellcheck service.
    * @module api/SpellcheckApi
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**
@@ -84,7 +84,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/json'];
       var returnType = CheckSentenceResponse;
 
       return this.apiClient.callApi(
@@ -131,7 +131,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/json'];
       var returnType = CheckWordResponse;
 
       return this.apiClient.callApi(

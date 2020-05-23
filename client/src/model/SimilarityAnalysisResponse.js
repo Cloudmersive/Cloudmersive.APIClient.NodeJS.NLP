@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.SentimentAnalysisResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.SimilarityAnalysisResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The SentimentAnalysisResponse model module.
-   * @module model/SentimentAnalysisResponse
+   * The SimilarityAnalysisResponse model module.
+   * @module model/SimilarityAnalysisResponse
    * @version 2.0.8
    */
 
   /**
-   * Constructs a new <code>SentimentAnalysisResponse</code>.
-   * Output of a sentiment analysis operation
-   * @alias module:model/SentimentAnalysisResponse
+   * Constructs a new <code>SimilarityAnalysisResponse</code>.
+   * Output of a similarity analysis operation
+   * @alias module:model/SimilarityAnalysisResponse
    * @class
    */
   var exports = function() {
@@ -51,15 +51,14 @@
 
 
 
-
   };
 
   /**
-   * Constructs a <code>SentimentAnalysisResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SimilarityAnalysisResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SentimentAnalysisResponse} obj Optional instance to populate.
-   * @return {module:model/SentimentAnalysisResponse} The populated <code>SentimentAnalysisResponse</code> instance.
+   * @param {module:model/SimilarityAnalysisResponse} obj Optional instance to populate.
+   * @return {module:model/SimilarityAnalysisResponse} The populated <code>SimilarityAnalysisResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -68,11 +67,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('SentimentClassificationResult')) {
-        obj['SentimentClassificationResult'] = ApiClient.convertToType(data['SentimentClassificationResult'], 'String');
-      }
-      if (data.hasOwnProperty('SentimentScoreResult')) {
-        obj['SentimentScoreResult'] = ApiClient.convertToType(data['SentimentScoreResult'], 'Number');
+      if (data.hasOwnProperty('SimilarityScoreResult')) {
+        obj['SimilarityScoreResult'] = ApiClient.convertToType(data['SimilarityScoreResult'], 'Number');
       }
       if (data.hasOwnProperty('SentenceCount')) {
         obj['SentenceCount'] = ApiClient.convertToType(data['SentenceCount'], 'Number');
@@ -82,20 +78,15 @@
   }
 
   /**
-   * True if the sentiment analysis operation was successful, false otherwise
+   * True if the similarity analysis operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Classification of input text into a sentiment classification; possible values are \"Positive\", \"Negative\" or \"Neutral\"
-   * @member {String} SentimentClassificationResult
+   * Similarity score between 0.0 and 1.0 where scores closer to zero have a low probability of semantic similarity, while scores close to 1.0 have a high probability of semantic similarity.
+   * @member {Number} SimilarityScoreResult
    */
-  exports.prototype['SentimentClassificationResult'] = undefined;
-  /**
-   * Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.
-   * @member {Number} SentimentScoreResult
-   */
-  exports.prototype['SentimentScoreResult'] = undefined;
+  exports.prototype['SimilarityScoreResult'] = undefined;
   /**
    * Number of sentences in input text
    * @member {Number} SentenceCount

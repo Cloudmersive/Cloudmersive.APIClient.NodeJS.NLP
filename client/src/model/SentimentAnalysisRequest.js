@@ -36,7 +36,7 @@
   /**
    * The SentimentAnalysisRequest model module.
    * @module model/SentimentAnalysisRequest
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**

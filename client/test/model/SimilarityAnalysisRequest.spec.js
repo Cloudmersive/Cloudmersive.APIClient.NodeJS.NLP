@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveNlpApiClient.AnalyticsApi();
+    instance = new CloudmersiveNlpApiClient.SimilarityAnalysisRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,47 +49,25 @@
       object[property] = value;
   }
 
-  describe('AnalyticsApi', function() {
-    describe('analyticsProfanity', function() {
-      it('should call analyticsProfanity successfully', function(done) {
-        //uncomment below and update the code to test analyticsProfanity
-        //instance.analyticsProfanity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('SimilarityAnalysisRequest', function() {
+    it('should create an instance of SimilarityAnalysisRequest', function() {
+      // uncomment below and update the code to test SimilarityAnalysisRequest
+      //var instane = new CloudmersiveNlpApiClient.SimilarityAnalysisRequest();
+      //expect(instance).to.be.a(CloudmersiveNlpApiClient.SimilarityAnalysisRequest);
     });
-    describe('analyticsSentiment', function() {
-      it('should call analyticsSentiment successfully', function(done) {
-        //uncomment below and update the code to test analyticsSentiment
-        //instance.analyticsSentiment(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property textToAnalyze1 (base name: "TextToAnalyze1")', function() {
+      // uncomment below and update the code to test the property textToAnalyze1
+      //var instane = new CloudmersiveNlpApiClient.SimilarityAnalysisRequest();
+      //expect(instance).to.be();
     });
-    describe('analyticsSimilarity', function() {
-      it('should call analyticsSimilarity successfully', function(done) {
-        //uncomment below and update the code to test analyticsSimilarity
-        //instance.analyticsSimilarity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property textToAnalyze2 (base name: "TextToAnalyze2")', function() {
+      // uncomment below and update the code to test the property textToAnalyze2
+      //var instane = new CloudmersiveNlpApiClient.SimilarityAnalysisRequest();
+      //expect(instance).to.be();
     });
-    describe('analyticsSubjectivity', function() {
-      it('should call analyticsSubjectivity successfully', function(done) {
-        //uncomment below and update the code to test analyticsSubjectivity
-        //instance.analyticsSubjectivity(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

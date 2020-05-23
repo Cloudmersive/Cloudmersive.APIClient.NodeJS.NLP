@@ -36,7 +36,7 @@
   /**
    * The SentenceSegmentationRequest model module.
    * @module model/SentenceSegmentationRequest
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**

@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.7
+- Package version: 2.0.8
 
 
 ## Installation
@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsProfanity**](docs/AnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSentiment**](docs/AnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSimilarity**](docs/AnalyticsApi.md#analyticsSimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSubjectivity**](docs/AnalyticsApi.md#analyticsSubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *CloudmersiveNlpApiClient.ExtractEntitiesApi* | [**extractEntitiesPost**](docs/ExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *CloudmersiveNlpApiClient.LanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
@@ -180,6 +181,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveNlpApiClient.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
  - [CloudmersiveNlpApiClient.SentimentAnalysisRequest](docs/SentimentAnalysisRequest.md)
  - [CloudmersiveNlpApiClient.SentimentAnalysisResponse](docs/SentimentAnalysisResponse.md)
+ - [CloudmersiveNlpApiClient.SimilarityAnalysisRequest](docs/SimilarityAnalysisRequest.md)
+ - [CloudmersiveNlpApiClient.SimilarityAnalysisResponse](docs/SimilarityAnalysisResponse.md)
  - [CloudmersiveNlpApiClient.SubjectivityAnalysisRequest](docs/SubjectivityAnalysisRequest.md)
  - [CloudmersiveNlpApiClient.SubjectivityAnalysisResponse](docs/SubjectivityAnalysisResponse.md)
  - [CloudmersiveNlpApiClient.WordPosition](docs/WordPosition.md)
