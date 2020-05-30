@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PosTaggedWord'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PosTaggedWord'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.PosSentence = factory(root.CloudmersiveNlpApiClient.ApiClient, root.CloudmersiveNlpApiClient.PosTaggedWord);
+    root.CloudmersiveNlpApiClient.HateSpeechAnalysisRequest = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
-}(this, function(ApiClient, PosTaggedWord) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The PosSentence model module.
-   * @module model/PosSentence
+   * The HateSpeechAnalysisRequest model module.
+   * @module model/HateSpeechAnalysisRequest
    * @version 2.0.9
    */
 
   /**
-   * Constructs a new <code>PosSentence</code>.
-   * Sentence in a POS tag result
-   * @alias module:model/PosSentence
+   * Constructs a new <code>HateSpeechAnalysisRequest</code>.
+   * Input to a hate speech analysis operation
+   * @alias module:model/HateSpeechAnalysisRequest
    * @class
    */
   var exports = function() {
@@ -52,28 +52,28 @@
   };
 
   /**
-   * Constructs a <code>PosSentence</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>HateSpeechAnalysisRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PosSentence} obj Optional instance to populate.
-   * @return {module:model/PosSentence} The populated <code>PosSentence</code> instance.
+   * @param {module:model/HateSpeechAnalysisRequest} obj Optional instance to populate.
+   * @return {module:model/HateSpeechAnalysisRequest} The populated <code>HateSpeechAnalysisRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Words')) {
-        obj['Words'] = ApiClient.convertToType(data['Words'], [PosTaggedWord]);
+      if (data.hasOwnProperty('TextToAnalyze')) {
+        obj['TextToAnalyze'] = ApiClient.convertToType(data['TextToAnalyze'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Words in the sentence
-   * @member {Array.<module:model/PosTaggedWord>} Words
+   * Text to analyze
+   * @member {String} TextToAnalyze
    */
-  exports.prototype['Words'] = undefined;
+  exports.prototype['TextToAnalyze'] = undefined;
 
 
 

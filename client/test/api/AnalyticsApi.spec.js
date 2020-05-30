@@ -50,6 +50,16 @@
   }
 
   describe('AnalyticsApi', function() {
+    describe('analyticsHateSpeech', function() {
+      it('should call analyticsHateSpeech successfully', function(done) {
+        //uncomment below and update the code to test analyticsHateSpeech
+        //instance.analyticsHateSpeech(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('analyticsProfanity', function() {
       it('should call analyticsProfanity successfully', function(done) {
         //uncomment below and update the code to test analyticsProfanity

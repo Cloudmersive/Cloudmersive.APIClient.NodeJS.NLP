@@ -36,7 +36,7 @@
   /**
    * The CheckWordRequest model module.
    * @module model/CheckWordRequest
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**

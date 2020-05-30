@@ -36,7 +36,7 @@
   /**
    * The SimilarityAnalysisResponse model module.
    * @module model/SimilarityAnalysisResponse
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**

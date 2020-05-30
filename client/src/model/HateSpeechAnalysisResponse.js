@@ -25,7 +25,7 @@
     if (!root.CloudmersiveNlpApiClient) {
       root.CloudmersiveNlpApiClient = {};
     }
-    root.CloudmersiveNlpApiClient.SentenceSegmentationResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
+    root.CloudmersiveNlpApiClient.HateSpeechAnalysisResponse = factory(root.CloudmersiveNlpApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,14 +34,15 @@
 
 
   /**
-   * The SentenceSegmentationResponse model module.
-   * @module model/SentenceSegmentationResponse
+   * The HateSpeechAnalysisResponse model module.
+   * @module model/HateSpeechAnalysisResponse
    * @version 2.0.9
    */
 
   /**
-   * Constructs a new <code>SentenceSegmentationResponse</code>.
-   * @alias module:model/SentenceSegmentationResponse
+   * Constructs a new <code>HateSpeechAnalysisResponse</code>.
+   * Output of a hate speech analysis operation
+   * @alias module:model/HateSpeechAnalysisResponse
    * @class
    */
   var exports = function() {
@@ -53,11 +54,11 @@
   };
 
   /**
-   * Constructs a <code>SentenceSegmentationResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>HateSpeechAnalysisResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SentenceSegmentationResponse} obj Optional instance to populate.
-   * @return {module:model/SentenceSegmentationResponse} The populated <code>SentenceSegmentationResponse</code> instance.
+   * @param {module:model/HateSpeechAnalysisResponse} obj Optional instance to populate.
+   * @return {module:model/HateSpeechAnalysisResponse} The populated <code>HateSpeechAnalysisResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,8 +67,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('Sentences')) {
-        obj['Sentences'] = ApiClient.convertToType(data['Sentences'], ['String']);
+      if (data.hasOwnProperty('HateSpeechScoreResult')) {
+        obj['HateSpeechScoreResult'] = ApiClient.convertToType(data['HateSpeechScoreResult'], 'Number');
       }
       if (data.hasOwnProperty('SentenceCount')) {
         obj['SentenceCount'] = ApiClient.convertToType(data['SentenceCount'], 'Number');
@@ -77,14 +78,17 @@
   }
 
   /**
+   * True if the profanity detection operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * @member {Array.<String>} Sentences
+   * Hate speech classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being hate speech language, while scores close to 1.0 have a high probability of being hate speech language.  Values above 0.8 have a very high probability of being hate speech.
+   * @member {Number} HateSpeechScoreResult
    */
-  exports.prototype['Sentences'] = undefined;
+  exports.prototype['HateSpeechScoreResult'] = undefined;
   /**
+   * Number of sentences in input text
    * @member {Number} SentenceCount
    */
   exports.prototype['SentenceCount'] = undefined;

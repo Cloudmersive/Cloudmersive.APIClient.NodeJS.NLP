@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 [Cloudmersive NLP API](https://www.cloudmersive.com/nlp-api) provides advanced machine learning-based natural language processing to detect language, sentiment, meaning and intent of text content.
 
 - API version: v1
-- Package version: 2.0.8
+- Package version: 2.0.9
 
 
 ## Installation
@@ -105,7 +105,7 @@ Apikey.apiKey = "YOUR API KEY"
 
 var api = new CloudmersiveNlpApiClient.AnalyticsApi()
 
-var input = new CloudmersiveNlpApiClient.ProfanityAnalysisRequest(); // {ProfanityAnalysisRequest} Input profanity analysis request
+var input = new CloudmersiveNlpApiClient.HateSpeechAnalysisRequest(); // {HateSpeechAnalysisRequest} Input hate speech analysis request
 
 
 var callback = function(error, data, response) {
@@ -115,7 +115,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.analyticsProfanity(input, callback);
+api.analyticsHateSpeech(input, callback);
 
 ```
 
@@ -125,6 +125,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsHateSpeech**](docs/AnalyticsApi.md#analyticsHateSpeech) | **POST** /nlp-v2/analytics/hate-speech | Perform Hate Speech Analysis and Detection on Text
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsProfanity**](docs/AnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSentiment**](docs/AnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *CloudmersiveNlpApiClient.AnalyticsApi* | [**analyticsSimilarity**](docs/AnalyticsApi.md#analyticsSimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
@@ -161,6 +162,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveNlpApiClient.ExtractEntitiesResponse](docs/ExtractEntitiesResponse.md)
  - [CloudmersiveNlpApiClient.GetWordsRequest](docs/GetWordsRequest.md)
  - [CloudmersiveNlpApiClient.GetWordsResponse](docs/GetWordsResponse.md)
+ - [CloudmersiveNlpApiClient.HateSpeechAnalysisRequest](docs/HateSpeechAnalysisRequest.md)
+ - [CloudmersiveNlpApiClient.HateSpeechAnalysisResponse](docs/HateSpeechAnalysisResponse.md)
  - [CloudmersiveNlpApiClient.LanguageDetectionRequest](docs/LanguageDetectionRequest.md)
  - [CloudmersiveNlpApiClient.LanguageDetectionResponse](docs/LanguageDetectionResponse.md)
  - [CloudmersiveNlpApiClient.LanguageTranslationRequest](docs/LanguageTranslationRequest.md)

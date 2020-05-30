@@ -36,7 +36,7 @@
   /**
    * The WordPosition model module.
    * @module model/WordPosition
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**

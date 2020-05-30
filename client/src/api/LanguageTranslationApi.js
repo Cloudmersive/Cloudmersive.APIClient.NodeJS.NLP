@@ -33,7 +33,7 @@
   /**
    * LanguageTranslation service.
    * @module api/LanguageTranslationApi
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**

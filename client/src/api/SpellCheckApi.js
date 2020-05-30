@@ -33,7 +33,7 @@
   /**
    * Spellcheck service.
    * @module api/SpellcheckApi
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**
