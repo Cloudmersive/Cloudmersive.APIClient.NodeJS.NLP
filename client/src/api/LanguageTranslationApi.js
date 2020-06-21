@@ -33,7 +33,7 @@
   /**
    * LanguageTranslation service.
    * @module api/LanguageTranslationApi
-   * @version 2.0.9
+   * @version 2.1.0
    */
 
   /**
@@ -142,6 +142,53 @@
     }
 
     /**
+     * Callback function to receive the result of the languageTranslationTranslateEngToFra operation.
+     * @callback module:api/LanguageTranslationApi~languageTranslationTranslateEngToFraCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LanguageTranslationResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Translate English to French text with Deep Learning AI
+     * Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param {module:model/LanguageTranslationRequest} input Input translation request
+     * @param {module:api/LanguageTranslationApi~languageTranslationTranslateEngToFraCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LanguageTranslationResponse}
+     */
+    this.languageTranslationTranslateEngToFra = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling languageTranslationTranslateEngToFra");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json'];
+      var returnType = LanguageTranslationResponse;
+
+      return this.apiClient.callApi(
+        '/nlp-v2/translate/language/eng/to/fra', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the languageTranslationTranslateEngToRus operation.
      * @callback module:api/LanguageTranslationApi~languageTranslationTranslateEngToRusCallback
      * @param {String} error Error message, if any.
@@ -183,6 +230,53 @@
 
       return this.apiClient.callApi(
         '/nlp-v2/translate/language/eng/to/rus', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the languageTranslationTranslateFraToEng operation.
+     * @callback module:api/LanguageTranslationApi~languageTranslationTranslateFraToEngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LanguageTranslationResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Translate French to English text with Deep Learning AI
+     * Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param {module:model/LanguageTranslationRequest} input Input translation request
+     * @param {module:api/LanguageTranslationApi~languageTranslationTranslateFraToEngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LanguageTranslationResponse}
+     */
+    this.languageTranslationTranslateFraToEng = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling languageTranslationTranslateFraToEng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json'];
+      var returnType = LanguageTranslationResponse;
+
+      return this.apiClient.callApi(
+        '/nlp-v2/translate/language/fra/to/eng', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -36,7 +36,7 @@
   /**
    * The RephraseRequest model module.
    * @module model/RephraseRequest
-   * @version 2.0.9
+   * @version 2.1.0
    */
 
   /**

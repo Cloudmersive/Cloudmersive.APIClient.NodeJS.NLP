@@ -70,10 +70,30 @@
         done();
       });
     });
+    describe('languageTranslationTranslateEngToFra', function() {
+      it('should call languageTranslationTranslateEngToFra successfully', function(done) {
+        //uncomment below and update the code to test languageTranslationTranslateEngToFra
+        //instance.languageTranslationTranslateEngToFra(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('languageTranslationTranslateEngToRus', function() {
       it('should call languageTranslationTranslateEngToRus successfully', function(done) {
         //uncomment below and update the code to test languageTranslationTranslateEngToRus
         //instance.languageTranslationTranslateEngToRus(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('languageTranslationTranslateFraToEng', function() {
+      it('should call languageTranslationTranslateFraToEng successfully', function(done) {
+        //uncomment below and update the code to test languageTranslationTranslateFraToEng
+        //instance.languageTranslationTranslateFraToEng(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
