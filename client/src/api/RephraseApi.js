@@ -33,7 +33,7 @@
   /**
    * Rephrase service.
    * @module api/RephraseApi
-   * @version 2.1.0
+   * @version 2.1.1
    */
 
   /**

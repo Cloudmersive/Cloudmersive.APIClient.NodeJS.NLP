@@ -36,7 +36,7 @@
   /**
    * The LanguageTranslationResponse model module.
    * @module model/LanguageTranslationResponse
-   * @version 2.1.0
+   * @version 2.1.1
    */
 
   /**

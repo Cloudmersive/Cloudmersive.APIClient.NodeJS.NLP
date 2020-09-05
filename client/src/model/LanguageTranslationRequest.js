@@ -36,7 +36,7 @@
   /**
    * The LanguageTranslationRequest model module.
    * @module model/LanguageTranslationRequest
-   * @version 2.1.0
+   * @version 2.1.1
    */
 
   /**

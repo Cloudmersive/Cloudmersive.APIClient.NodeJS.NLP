@@ -36,7 +36,7 @@
   /**
    * The SubjectivityAnalysisRequest model module.
    * @module model/SubjectivityAnalysisRequest
-   * @version 2.1.0
+   * @version 2.1.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The HateSpeechAnalysisRequest model module.
    * @module model/HateSpeechAnalysisRequest
-   * @version 2.1.0
+   * @version 2.1.1
    */
 
   /**

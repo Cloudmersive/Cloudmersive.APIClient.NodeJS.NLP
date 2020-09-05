@@ -36,7 +36,7 @@
   /**
    * The ExtractEntitiesResponse model module.
    * @module model/ExtractEntitiesResponse
-   * @version 2.1.0
+   * @version 2.1.1
    */
 
   /**
